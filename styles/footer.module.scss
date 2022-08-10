@@ -1,0 +1,42 @@
+@use "variables" as *;
+.container {
+  background-color: black;
+  color: white;
+  justify-content: center;
+  display: grid;
+  min-height: 44rem;
+  width: 100vw;
+
+  div {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.main {
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  padding-top: 8rem;
+  text-align: center;
+
+  @media (min-width: $sm) {
+    text-align: left;
+  }
+
+  @media (min-width: $md) {
+    height: 8.6rem;
+    padding-top: 7.6rem;
+    padding-bottom: 7.8rem;
+
+    align-items: flex-start;
+  }
+}
+
+.textContainer {
+  @media (min-width: $md) {
+    margin-left: 13rem;
+  }
+}

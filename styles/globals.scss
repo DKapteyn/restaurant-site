@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap");
 
 :root {
   --beaver: #9e7f66;
@@ -8,9 +8,62 @@
   --shuttleGray: #5c6779;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "League Spartan", sans-serif;
 }
+
+.headingXl {
+  font-weight: 300;
+  font-size: 8rem;
+  line-height: 100%;
+  letter-spacing: -1px;
+  color: #17192b;
+}
+
+.headingL {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 100%;
+  letter-spacing: -0.5px;
+  color: #242b37;
+}
+
+.headingM {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.25px;
+  color: #17192b;
+}
+
+.headingS {
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+  text-align: center;
+  letter-spacing: 2.5px;
+  background: #4c4c4c;
+}
+
+.bodyFont1 {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #242b37;
+}
+
+.bodyFont2 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: #17192b;
+}
+
+//breakpoint sizes
