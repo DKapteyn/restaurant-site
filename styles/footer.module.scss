@@ -1,14 +1,27 @@
-@use "variables" as *;
+@use "styles/_utils/screen.module";
+
 .container {
   background-color: black;
   color: white;
   justify-content: center;
   display: grid;
-  min-height: 44rem;
-  width: 100vw;
+  height: 44rem;
+
+  @media (min-width: screen.$mdMin) {
+    justify-content: left;
+    height: 32.8rem;
+    padding-left: 3.9rem;
+  }
+  @media (min-width: screen.$lgMin) {
+    height: 24rem;
+    padding-left: 16.5rem;
+  }
 
   div {
-    margin-bottom: 3.2rem;
+    margin-bottom: 4.6rem;
+    @media (min-width: (screen.$mdMin)) and (max-width: (screen.$lgMax)) {
+      padding-left: 3.9rem;
+    }
   }
 }
 
@@ -22,21 +35,31 @@
   padding-top: 8rem;
   text-align: center;
 
-  @media (min-width: $sm) {
-    text-align: left;
-  }
-
-  @media (min-width: $md) {
+  @media (min-width: screen.$mdMin) {
     height: 8.6rem;
-    padding-top: 7.6rem;
-    padding-bottom: 7.8rem;
-
+    padding-top: 6.4rem;
+    text-align: left;
+    flex-direction: row;
     align-items: flex-start;
   }
 }
 
 .textContainer {
-  @media (min-width: $md) {
+  @media (min-width: screen.$mdMin) {
     margin-left: 13rem;
+  }
+  @media (min-width: screen.$lgMin) {
+    display: flex;
+  }
+}
+
+.text1 {
+  @media (min-width: screen.$lgMin) {
+    margin-left: 12.4rem;
+  }
+}
+.text2 {
+  @media (min-width: screen.$lgMin) {
+    margin-left: 19.2rem;
   }
 }

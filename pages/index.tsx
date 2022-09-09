@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.scss";
-import Layout from "../components/Layout";
+import Layout from "../components/shared/Layout";
+import HeroHome from "../components/homepage/HeroHome";
+
+export const SCREEN_SIZE = { sm: "640px", md: "768px", lg: "1024px" };
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +14,7 @@ const Home: NextPage = () => {
         <meta name="restaurant site" content="home page for restaurant" />
       </Head>
       <Layout>
-        <h1>This is the main</h1>
+        <HeroHome />
       </Layout>
     </div>
   );

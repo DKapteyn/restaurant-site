@@ -1,0 +1,12 @@
+.mainContainer {
+  height: 6.4rem;
+  color: white;
+  border: 1px solid white;
+  background-color: black;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+}
