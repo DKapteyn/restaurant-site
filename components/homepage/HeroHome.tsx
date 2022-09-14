@@ -12,13 +12,13 @@ export default function HeroHome() {
         alt="plate of food"
       />
       <img
-        className={`${style.tabletPic} ${style.pic}`}
+        className={`${style.mobileAndTabletPic} ${style.pic}`}
         src=".\images\homepage\hero-bg-tablet@2x.jpg"
         alt="plate of food"
       />
       <img
-        className={`${style.mobilePic} ${style.pic}`}
-        src=".\images\homepage\hero-bg-mobile.jpg"
+        className={`${style.mobileAndTabletPic} ${style.pic}`}
+        src=".\images\homepage\hero-bg-mobile@2x.jpg"
         alt="plate of food"
       />
       <div className={style.block}>this is the block</div>

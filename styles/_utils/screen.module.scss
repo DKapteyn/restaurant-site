@@ -27,6 +27,17 @@ $lgMax: $lg - 1px;
     @content;
   }
 }
+@mixin mobileAndTablet {
+  @media (max-width: $lgMax) {
+    @content;
+  }
+}
+
+@mixin tabletAndDesktop {
+  @media (min-width: $mdMin) {
+    @content;
+  }
+}
 
 @mixin desktop {
   @media (min-width: $lgMin) {

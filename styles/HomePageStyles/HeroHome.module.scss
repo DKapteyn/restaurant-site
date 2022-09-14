@@ -58,17 +58,9 @@
   }
 }
 
-.tabletPic {
+.mobileAndTabletPic {
   display: none;
-  @include screen.tablet {
-    display: block;
-    width: 100%;
-  }
-}
-
-.mobilePic {
-  display: none;
-  @include screen.mobile {
+  @include screen.mobileAndTablet {
     display: block;
     width: 100%;
   }
@@ -84,13 +76,17 @@
     margin-left: 16.5rem;
     margin-top: 6.5rem;
   }
+
+  @include screen.mobileAndTablet {
+    text-align: center;
+    display: grid;
+    justify-items: center;
+  }
+
   @include screen.tablet {
     max-width: 68.9rem;
     height: 40.2rem;
     margin: 37.4rem auto auto auto;
-    text-align: center;
-    display: grid;
-    justify-items: center;
   }
   @include screen.mobile {
     max-width: 32.7rem;
@@ -107,26 +103,25 @@
   @include screen.desktop {
     margin-top: 15.3rem;
   }
+
+  @include screen.mobileAndTablet {
+    text-align: center;
+  }
+
   @include screen.tablet {
     margin-top: 3.8rem;
     max-width: 30rem;
-    font-weight: 300;
     font-size: 48px;
     line-height: 64px;
-
-    text-align: center;
     letter-spacing: -0.6px;
   }
 
   @include screen.mobile {
     margin-top: 3.6rem;
-    font-weight: 300;
     font-size: 32px;
     line-height: 40px;
-
-    text-align: center;
     letter-spacing: -0.4px;
-    width: 20rem;
+    max-width: 20rem;
   }
 }
 .marginTitle2 {
@@ -138,7 +133,7 @@
   @include screen.tablet {
     margin-top: 2rem;
     margin-bottom: 5.2rem;
-    width: 57.3rem;
+    max-width: 57.3rem;
   }
 
   @include screen.mobile {
