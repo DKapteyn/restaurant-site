@@ -1,10 +1,8 @@
 //screen sizes
-$sm: 640px;
-$md: 768px;
+
+$md: 475px;
 $lg: 1024px;
 
-$smMin: $sm;
-$smMax: $sm - 1px;
 $mdMin: $md;
 $mdMax: $md - 1px;
 $lgMin: $lg;
@@ -12,8 +10,6 @@ $lgMax: $lg - 1px;
 
 //export to Typescript
 :export {
-  smMax: $smMax;
-  smMin: $smMin;
   mdMax: $mdMax;
   mdMin: $mdMin;
   lgMax: $lgMax;

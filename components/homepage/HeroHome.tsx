@@ -18,7 +18,7 @@ export default function HeroHome() {
       />
       <img
         className={`${style.mobilePic} ${style.pic}`}
-        src=".\images\homepage\hero-bg-mobile@2x.jpg"
+        src=".\images\homepage\hero-bg-mobile.jpg"
         alt="plate of food"
       />
       <div className={style.block}>this is the block</div>

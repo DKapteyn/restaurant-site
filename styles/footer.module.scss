@@ -7,20 +7,20 @@
   display: grid;
   height: 44rem;
 
-  @media (min-width: screen.$mdMin) {
+  @include screen.tablet {
     justify-content: left;
     height: 32.8rem;
     padding-left: 3.9rem;
   }
-  @media (min-width: screen.$lgMin) {
+  @include screen.desktop {
     height: 24rem;
     padding-left: 16.5rem;
   }
 
   div {
     margin-bottom: 4.6rem;
-    @media (min-width: (screen.$mdMin)) and (max-width: (screen.$lgMax)) {
-      padding-left: 3.9rem;
+    @include screen.tablet {
+      margin-left: 3.9rem;
     }
   }
 }
@@ -45,21 +45,20 @@
 }
 
 .textContainer {
-  @media (min-width: screen.$mdMin) {
+  @include screen.tablet {
     margin-left: 13rem;
   }
-  @media (min-width: screen.$lgMin) {
+  @include screen.desktop {
     display: flex;
   }
 }
-
 .text1 {
-  @media (min-width: screen.$lgMin) {
+  @include screen.desktop {
     margin-left: 12.4rem;
   }
 }
 .text2 {
-  @media (min-width: screen.$lgMin) {
+  @include screen.desktop {
     margin-left: 19.2rem;
   }
 }
