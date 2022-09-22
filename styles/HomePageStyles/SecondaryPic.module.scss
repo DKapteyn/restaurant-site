@@ -1,0 +1,102 @@
+@use "styles/_utils/screen.module";
+
+.mainContainer {
+  display: flex;
+  @include screen.desktop {
+    align-items: center;
+  }
+
+  @include screen.mobileAndTablet {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  color: #242b37;
+  @include screen.mobile {
+    align-items: center;
+    width: 32.7rem;
+    height: 214rem;
+  }
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.mainText {
+  font-weight: 700;
+  margin: 0px 0px;
+
+  @include screen.desktop {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+  }
+  @include screen.mobile {
+    width: 24rem;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    letter-spacing: -0.4px;
+    margin-top: 3.6rem;
+  }
+}
+
+.subText {
+  font-weight: 400;
+
+  @include screen.desktop {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1.3rem;
+  }
+  @include screen.mobile {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+
+.image {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.mainImageDesk {
+  @include screen.desktop {
+    height: 72rem;
+    width: 54rem;
+  }
+  @include screen.mobileAndTablet {
+    display: none;
+  }
+}
+
+.mainImageTab {
+  @include screen.tablet {
+    height: 36rem;
+    width: 57.3rem;
+  }
+  @include screen.mobile {
+    display: none;
+  }
+  @include screen.desktop {
+    display: none;
+  }
+}
+
+.mainImageMob {
+  @include screen.mobile {
+    height: 32.7rem;
+    width: 40rem;
+    margin-bottom: 4.8rem;
+  }
+  @include screen.tabletAndDesktop {
+    display: none;
+  }
+}

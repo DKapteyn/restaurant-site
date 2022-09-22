@@ -9,3 +9,12 @@ export interface ButtonT {
   title: string;
   link: string;
 }
+
+export interface SecondaryPicT {
+  imageNameDesk: string;
+  imageNameTab: string;
+  imageNameMob: string;
+  altName: string;
+  mainText: string;
+  subText: string;
+}
