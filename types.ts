@@ -18,3 +18,11 @@ export interface SecondaryPicT {
   mainText: string;
   subText: string;
 }
+
+export interface MenuItemsT {
+  deskTabImg: string;
+  mobImg: string;
+  imgAlt: string;
+  itemTitle: string;
+  itemPara: string;
+}

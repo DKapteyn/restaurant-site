@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.scss";
 import Layout from "../components/shared/Layout";
 import HeroHome from "../components/homepage/HeroHome";
 import SecondaryPic from "../components/homepage/SecondaryPic";
+import MenuHighlights from "../components/homepage/Highlights/MenuHighlights";
 
 export const SCREEN_SIZE = { sm: "640px", md: "768px", lg: "1024px" };
 
@@ -25,6 +26,16 @@ const Home: NextPage = () => {
           subText="Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange 
           a tour of the farm before your meal."
         />
+        <SecondaryPic
+          imageNameDesk=".\images\homepage\locally-sourced-desktop@2x.jpg"
+          imageNameTab=".\images\homepage\locally-sourced-tablet@2x.jpg"
+          imageNameMob=".\images\homepage\locally-sourced-mobile@2x.jpg"
+          altName="sheep"
+          mainText="The most locally sourced food"
+          subText="All our ingredients come directly from our farm or local fishery. So you can be sure that you’re 
+          eating the freshest, most sustainable food."
+        />
+        <MenuHighlights />
       </Layout>
     </div>
   );
