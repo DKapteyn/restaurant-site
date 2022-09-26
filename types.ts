@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { FC, ReactElement, ReactFragment, ReactNode } from "react";
 
 export interface LayoutT {
   children: ReactNode;
@@ -24,5 +24,6 @@ export interface MenuItemsT {
   mobImg: string;
   imgAlt: string;
   itemTitle: string;
-  itemPara: string;
+  //React Element used to add <br/> tags if necessary.
+  itemPara: string | ReactElement;
 }

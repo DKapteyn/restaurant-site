@@ -11,7 +11,7 @@ export default function SecondaryPic({
   subText,
 }: SecondaryPicT) {
   return (
-    <div className={s.mainContainer}>
+    <section className={s.mainContainer}>
       <div>
         <img
           className={` ${s.mainImageDesk} ${s.image}`}
@@ -33,7 +33,7 @@ export default function SecondaryPic({
       <div className={s.subContainer}>
         <img
           className={s.image}
-          src=".\images\patterns\pattern-divide.svg"
+          src="./images/patterns/pattern-divide.svg"
           alt="divider"
         />
 
@@ -42,6 +42,6 @@ export default function SecondaryPic({
           <h3 className={s.subText}>{subText}</h3>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

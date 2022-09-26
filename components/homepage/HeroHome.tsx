@@ -8,23 +8,23 @@ export default function HeroHome() {
     <div className={style.mainContainer}>
       <img
         className={`${style.desktopPic} ${style.pic}`}
-        src=".\images\homepage\hero-bg-desktop@2x.jpg"
+        src="./images/homepage/hero-bg-desktop@2x.jpg"
         alt="plate of food"
       />
       <img
         className={`${style.mobileAndTabletPic} ${style.pic}`}
-        src=".\images\homepage\hero-bg-tablet@2x.jpg"
+        src="./images/homepage/hero-bg-tablet@2x.jpg"
         alt="plate of food"
       />
       <img
         className={`${style.mobileAndTabletPic} ${style.pic}`}
-        src=".\images\homepage\hero-bg-mobile@2x.jpg"
+        src="./images/homepage/hero-bg-mobile@2x.jpg"
         alt="plate of food"
       />
       <div className={style.block}>this is the block</div>
 
       <div className={style.textContainer}>
-        <img className={style.logo} src=".\images\logo.svg" alt="logo" />
+        <img className={style.logo} src="./images/logo.svg" alt="logo" />
         <h2 className={`${style.marginTitle1} ${font.headingXL}`}>
           Exquisite dining since 1989
         </h2>
