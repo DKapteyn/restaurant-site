@@ -1,20 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { ButtonT } from "../../types";
 import s from "../../styles/Shared/button.module.scss";
 import Link from "next/link";
 import font from "../../styles/_utils/font.module.scss";
 
-export default function Button({ title, link, propWidth }: ButtonT) {
-  let capTitle = title.toUpperCase();
+export default function Button({
+  title,
+  link,
+  propWidth,
+  hoverColor,
+  propBackgroundColor,
+}: ButtonT) {
+  const [isHover, setIsHover] = useState(false);
 
   let propBasedStyles = {
-    width: propWidth,
+    width: propWidth ? propWidth : "245px",
+    backgroundColor: isHover
+      ? hoverColor
+        ? hoverColor
+        : "white"
+      : propBackgroundColor
+      ? propBackgroundColor
+      : "black",
   };
 
   return (
-    <div className={s.mainContainer} style={propBasedStyles}>
+    <div
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
+      className={s.mainContainer}
+      style={propBasedStyles}
+    >
       <Link href={link}>
-        <h4 className={font.headingS}>{capTitle}</h4>
+        <h4 className={`${font.headingS} ${s.capitalize}`}>{title}</h4>
       </Link>
     </div>
   );

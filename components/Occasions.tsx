@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "./shared/Button";
 
 export default function Occasions() {
   const dataArray = [
@@ -69,6 +70,7 @@ export default function Occasions() {
           <h2>{dataArray[`${OccasionData}`].title}</h2>
           <p>{dataArray[`${OccasionData}`].para}</p>
         </div>
+        <Button link="/orderPage" title="Book a table" />
       </section>
     </div>
   );

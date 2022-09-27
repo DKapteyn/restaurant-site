@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import s from "../../styles/HomePageStyles/Occasions.module.scss";
-import Button from "../../components/shared/Buttons/blackButton";
+import Button from "../shared/Button";
 
 export default function Occasions() {
   const dataArray = [
@@ -44,8 +44,8 @@ export default function Occasions() {
 
   return (
     <div>
-      <section>
-        <img
+      <div>
+        {/* <img
           className="deskImage"
           src={dataArray[`${OccasionData}`].deskImage}
           alt="People Eating"
@@ -59,7 +59,7 @@ export default function Occasions() {
           className="mobImage"
           src={dataArray[`${OccasionData}`].mobImage}
           alt="People Eating"
-        />
+  />*/}
 
         <div className={s.eventChanger}>
           <h3 onClick={() => changeToFamilyGathering()}>Family Gathering</h3>
@@ -70,10 +70,9 @@ export default function Occasions() {
         <div>
           <h2>{dataArray[`${OccasionData}`].title}</h2>
           <p>{dataArray[`${OccasionData}`].para}</p>
+          <Button link="#" title="did this work" />
         </div>
-
-        <Button />
-      </section>
+      </div>
     </div>
   );
 }

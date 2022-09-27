@@ -1,13 +1,15 @@
-import React, { FC, ReactElement, ReactFragment, ReactNode } from "react";
+import React, { ReactElement, ReactNode } from "react";
 
 export interface LayoutT {
   children: ReactNode;
 }
 
 export interface ButtonT {
-  propWidth: string;
+  propWidth?: string;
   title: string;
   link: string;
+  propBackgroundColor?: string;
+  hoverColor?: string;
 }
 
 export interface SecondaryPicT {

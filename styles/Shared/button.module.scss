@@ -2,11 +2,13 @@
   height: 6.4rem;
   color: white;
   border: 1px solid white;
-  background-color: black;
+  cursor: pointer;
 
   &:hover {
-    background-color: white;
     color: black;
-    cursor: pointer;
   }
+}
+
+.capitalize {
+  text-transform: uppercase;
 }

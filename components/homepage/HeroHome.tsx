@@ -33,7 +33,7 @@ export default function HeroHome() {
           the freshest produce from the comfort of our farmhouse.
         </h3>
 
-        <Button link="/orderPage" propWidth="245px" title="Book a table" />
+        <Button link="/orderPage" title="Book a table" />
       </div>
     </div>
   );
