@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./shared/Button";
+import s from "../styles/HomePageStyles/Occasions.module.scss";
 
 export default function Occasions() {
   const dataArray = [
@@ -42,35 +43,37 @@ export default function Occasions() {
   }
 
   return (
-    <div>
+    <div className={s.fullComponent}>
       <section>
         <img
-          className="deskImage"
+          className={s.deskImage}
           src={dataArray[`${OccasionData}`].deskImage}
           alt="People Eating"
         />
         <img
-          className="tabImage"
+          className={s.tabImage}
           src={dataArray[`${OccasionData}`].tabImage}
           alt="People Eating"
         />
         <img
-          className="mobImage"
+          className={s.mobImage}
           src={dataArray[`${OccasionData}`].mobImage}
           alt="People Eating"
         />
 
-        <div>
+        <div className={s.eventChangerContainer}>
           <h3 onClick={() => changeToFamilyGathering()}>Family Gathering</h3>
           <h3 onClick={() => changeToSpecialEvents()}> Special Events</h3>
           <h3 onClick={() => changeToSocialEvents()}> Social Events </h3>
         </div>
 
-        <div>
-          <h2>{dataArray[`${OccasionData}`].title}</h2>
-          <p>{dataArray[`${OccasionData}`].para}</p>
+        <div className={s.text}>
+          <h2 className={s.title}>{dataArray[`${OccasionData}`].title}</h2>
+          <p className={s.para}>{dataArray[`${OccasionData}`].para}</p>
         </div>
-        <Button link="/orderPage" title="Book a table" />
+        <div className={s.button}>
+          <Button link="/orderPage" title="Book a table" />
+        </div>
       </section>
     </div>
   );
