@@ -10,11 +10,13 @@ export default function MenuItems({
   itemPara,
 }: MenuItemsT) {
   return (
-    <>
+    <div className={s.menuItemContainer}>
       <img className={s.deskTabImg} src={deskTabImg} alt={imgAlt} />
       <img className={s.mobileImg} src={mobImg} alt={imgAlt} />
-      <h4 className={s.subTitle}>{itemTitle}</h4>
-      <p className={`${s.para} ${s.subPara}`}>{itemPara}</p>
-    </>
+      <div className={s.menuItemtext}>
+        <h4 className={s.subTitle}>{itemTitle}</h4>
+        <p className={`${s.para} ${s.subPara}`}>{itemPara}</p>
+      </div>
+    </div>
   );
 }
