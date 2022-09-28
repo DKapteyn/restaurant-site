@@ -17,6 +17,11 @@ export default function MenuItems({
         <h4 className={s.subTitle}>{itemTitle}</h4>
         <p className={`${s.para} ${s.subPara}`}>{itemPara}</p>
       </div>
+      <img
+        className={s.imageDivide}
+        src="./images/patterns/pattern-divide.svg"
+        alt="decoration"
+      />
     </div>
   );
 }

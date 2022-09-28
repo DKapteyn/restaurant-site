@@ -19,6 +19,8 @@
   display: none;
   @include screen.tablet {
     display: inline;
+    width: 573px;
+    height: 360px;
   }
 }
 .mobImage {
@@ -35,60 +37,91 @@
   height: 157px;
   text-align: center;
   color: #242b37;
-  margin: 0px auto 27px auto;
+  @include screen.mobile {
+    margin: 0px auto 27px auto;
+  }
+  @include screen.tablet {
+    margin: 47px auto 120px auto;
+  }
+
+  & > * {
+    margin: 0px;
+  }
 }
 .title {
   font-weight: 700;
-  font-size: 32px;
-  line-height: -0.4px;
-  letter-spacing: -0.4px;
+
+  @include screen.mobile {
+    font-size: 32px;
+    line-height: -0.4px;
+    letter-spacing: -0.4px;
+  }
+  @include screen.tablet {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+  }
 }
 .para {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
+  @include screen.mobile {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  @include screen.tablet {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 19px;
+  }
 }
 
 .eventChangerContainer {
   display: flex;
+  color: #4c4c4c;
   @include screen.mobile {
     width: 180px;
     height: 116px;
-    color: #4c4c4c;
+
     margin: 49px auto 27px auto;
 
     flex-direction: column;
+  }
+  @include screen.tablet {
+    gap: 41px;
+    margin-top: 57px;
+  }
 
-    & > * {
-      margin: 0px 0px;
-      text-align: center;
-      font-weight: 600;
-      font-size: 17px;
-      line-height: 28px;
-      cursor: pointer;
-      letter-spacing: 2.5px;
-      position: relative;
+  & > * {
+    margin: 0px 0px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 28px;
+    cursor: pointer;
+    letter-spacing: 2.5px;
+    position: relative;
 
-      &:after {
-        content: "";
-        position: absolute;
-        left: 5px;
-        bottom: 0;
-        height: 1px;
-        width: 93%; /* or 100px */
-        border-bottom: 2px solid #4c4c4c;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      bottom: 0;
+      height: 1px;
+      width: 93%; /* or 100px */
+      border-bottom: 2px solid var(--beaver);
 
-        opacity: 0;
-        transform: scaleX(0);
-        transition: transform 450ms ease-in-out;
-      }
-      &:hover:after {
-        opacity: 1;
-        transform: scaleX(1);
-      }
+      opacity: 0;
+      transform: scaleX(0);
+      transition: transform 450ms ease-in-out;
     }
+    &:hover:after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
 
-    & > *:not(:first-child) {
+  & > *:not(:first-child) {
+    @include screen.mobile {
       margin-top: 16px;
     }
   }
@@ -97,4 +130,6 @@
 .button {
   width: fit-content;
   margin: auto;
+  outline: 2px solid black;
+  outline-offset: -2px;
 }
