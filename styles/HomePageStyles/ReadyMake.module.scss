@@ -1,0 +1,43 @@
+@use "styles/_utils/screen.module";
+
+.mainContainer {
+  display: grid;
+  margin-top: 124px;
+
+  @include screen.mobile {
+    width: 100%;
+    height: 328px;
+  }
+
+  & > * {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+}
+
+.image {
+  max-width: 100%;
+  height: 100%;
+}
+
+.subContainer {
+  width: 327px;
+  height: 164px;
+  margin: 84px auto 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  /* or 125% */
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: -0.4px;
+
+  color: #ffffff;
+}

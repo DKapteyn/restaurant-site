@@ -32,7 +32,7 @@ export default function SecondaryPic({
 
       <div className={s.subContainer}>
         <img
-          className={s.image}
+          className={`${s.image} ${s.line}`}
           src="./images/patterns/pattern-divide.svg"
           alt="divider"
         />

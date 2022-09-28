@@ -1,0 +1,28 @@
+@use "styles/_utils/screen.module.scss";
+
+.mainContainer {
+  position: relative;
+  margin: auto;
+  @include screen.desktop {
+    width: 54rem;
+  }
+  @include screen.tablet {
+    width: 57.3rem;
+  }
+  @include screen.mobile {
+    width: 32.7rem;
+  }
+}
+
+.lines {
+  position: absolute;
+  top: 152px;
+  left: 471px;
+  z-index: 2;
+}
+
+.design {
+  position: absolute;
+  top: 397px;
+  left: 287px;
+}
