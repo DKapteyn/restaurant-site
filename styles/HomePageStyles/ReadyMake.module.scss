@@ -3,6 +3,7 @@
 .mainContainer {
   display: grid;
   margin-top: 124px;
+  overflow: hidden;
 
   @include screen.mobile {
     width: 100%;
