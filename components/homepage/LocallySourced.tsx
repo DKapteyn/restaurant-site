@@ -1,5 +1,5 @@
 import React from "react";
-import SecondaryPic from "./SecondaryPic";
+
 import s from "../../styles/HomePageStyles/LocallySourced.module.scss";
 export default function LocallySourced() {
   return (

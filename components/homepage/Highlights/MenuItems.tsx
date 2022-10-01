@@ -11,17 +11,20 @@ export default function MenuItems({
 }: MenuItemsT) {
   return (
     <div className={s.menuItemContainer}>
-      <img className={s.deskTabImg} src={deskTabImg} alt={imgAlt} />
-      <img className={s.mobileImg} src={mobImg} alt={imgAlt} />
+      <div className={s.imgContainer}>
+        <img className={s.deskTabImg} src={deskTabImg} alt={imgAlt} />
+        <img className={s.mobileImg} src={mobImg} alt={imgAlt} />
+        <img
+          className={s.imageDivide}
+          src="./images/patterns/pattern-divide.svg"
+          alt="decoration"
+        />
+      </div>
+
       <div className={s.menuItemtext}>
         <h4 className={s.subTitle}>{itemTitle}</h4>
         <p className={`${s.para} ${s.subPara}`}>{itemPara}</p>
       </div>
-      <img
-        className={s.imageDivide}
-        src="./images/patterns/pattern-divide.svg"
-        alt="decoration"
-      />
     </div>
   );
 }

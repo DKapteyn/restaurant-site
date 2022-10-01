@@ -15,6 +15,13 @@
   @include screen.tablet {
     padding-top: 99px;
   }
+  @include screen.desktop {
+    display: flex;
+    justify-content: center;
+    max-width: 1440px;
+    height: 761px;
+    padding-top: 181px;
+  }
 }
 
 .subContainer {
@@ -26,8 +33,11 @@
   @include screen.tablet {
     height: 789px;
   }
-
-  margin: auto;
+  @include screen.desktop {
+    display: flex;
+    width: 1110px;
+    height: 441px;
+  }
 }
 
 .textContainer {
@@ -38,6 +48,8 @@
   @include screen.tablet {
     width: 445px;
   }
+  @include screen.desktop {
+  }
 }
 .mainTitle {
   font-weight: 700;
@@ -46,7 +58,7 @@
     line-height: 125%;
     letter-spacing: -0.4px;
   }
-  @include screen.tablet {
+  @include screen.tabletAndDesktop {
     font-size: 48px;
     line-height: 48px;
     letter-spacing: -0.5px;
@@ -67,7 +79,7 @@
   @include screen.mobile {
     margin-bottom: 85px;
   }
-  @include screen.tablet {
+  @include screen.tabletAndDesktop {
     margin-bottom: 54px;
     font-size: 20px;
     line-height: 30px;
@@ -104,10 +116,44 @@
     width: 573px;
     margin: auto;
   }
+  @include screen.desktop {
+    width: 540px;
+    height: 96px;
+  }
+}
+
+.imgContainer {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.imageDivide {
+  position: absolute;
+  z-index: 1;
+  @include screen.mobile {
+    display: none;
+  }
+  @include screen.tablet {
+    left: 85px;
+    top: 20px;
+  }
+  @include screen.desktop {
+    top: 19px;
+    right: -32px;
+  }
 }
 
 .deskTabImg {
-  display: none;
+  z-index: 2;
+  @include screen.mobileAndTablet {
+    display: none;
+  }
+
+  @include screen.desktop {
+    width: 128px;
+    height: 96px;
+  }
 }
 
 .mobileImg {
@@ -119,6 +165,9 @@
   @include screen.tablet {
     width: 128px;
     height: 96px;
+  }
+  @include screen.desktop {
+    display: none;
   }
 }
 
@@ -150,16 +199,5 @@
     & > br {
       display: none;
     }
-  }
-}
-
-.imageDivide {
-  @include screen.mobile {
-    display: none;
-  }
-  @include screen.tablet {
-    position: absolute;
-    left: 85px;
-    top: 20px;
   }
 }
