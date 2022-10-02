@@ -7,7 +7,11 @@ export default function MenuHighlights() {
     <div className={s.mainContainer}>
       <section className={s.subContainer}>
         <div className={s.textContainer}>
-          <img src="./images/patterns/pattern-divide.svg" alt="divider" />
+          <img
+            className={s.textDivider}
+            src="./images/patterns/pattern-divide.svg"
+            alt="divider"
+          />
           <h3 className={s.mainTitle}> A few highlights from our menu</h3>
           <p className={`${s.para} ${s.mainPara}`}>
             We cater for all dietary requirements, but here’s a glimpse at some

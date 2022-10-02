@@ -43,8 +43,8 @@ export default function Occasions() {
   }
 
   return (
-    <div className={s.fullComponent}>
-      <section>
+    <div>
+      <section className={s.mainContainer}>
         <img
           className={s.deskImage}
           src={dataArray[`${OccasionData}`].deskImage}
@@ -61,18 +61,21 @@ export default function Occasions() {
           alt="People Eating"
         />
 
-        <div className={s.eventChangerContainer}>
-          <h3 onClick={() => changeToFamilyGathering()}>Family Gathering</h3>
-          <h3 onClick={() => changeToSpecialEvents()}> Special Events</h3>
-          <h3 onClick={() => changeToSocialEvents()}> Social Events </h3>
-        </div>
+        <div className={s.textContainer}>
+          <div className={s.eventChangerContainer}>
+            <h3 onClick={() => changeToFamilyGathering()}>Family Gathering</h3>
+            <h3 onClick={() => changeToSpecialEvents()}> Special Events</h3>
+            <h3 onClick={() => changeToSocialEvents()}> Social Events </h3>
+          </div>
 
-        <div className={s.text}>
-          <h2 className={s.title}>{dataArray[`${OccasionData}`].title}</h2>
-          <p className={s.para}>{dataArray[`${OccasionData}`].para}</p>
-        </div>
-        <div className={s.button}>
-          <Button link="/orderPage" title="Book a table" />
+          <div className={s.text}>
+            <h2 className={s.title}>{dataArray[`${OccasionData}`].title}</h2>
+            <p className={s.para}>{dataArray[`${OccasionData}`].para}</p>
+          </div>
+
+          <div className={s.button}>
+            <Button link="/orderPage" title="Book a table" />
+          </div>
         </div>
       </section>
     </div>

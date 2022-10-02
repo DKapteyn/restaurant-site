@@ -1,18 +1,27 @@
 @use "styles/_utils/screen.module";
 
-.fullComponent {
+.mainContainer {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-top: 8px;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  @include screen.mobileAndTablet {
+    flex-direction: column;
+
+    margin-top: 8px;
+  }
+  @include screen.desktop {
+    justify-content: center;
+  }
 }
 
 .deskImage {
   display: none;
   @include screen.desktop {
     display: inline;
-    width: 326px;
-    height: 400px;
+    width: 540px;
+    height: 600px;
   }
 }
 .tabImage {
@@ -32,11 +41,19 @@
   }
 }
 
+.textContainer {
+  @include screen.desktop {
+    padding-left: 125px;
+    display: grid;
+    grid-template-areas: "text" "button" "eventChangerContainer";
+    height: 468px;
+  }
+}
+
 .text {
-  width: 327px;
-  height: 157px;
   text-align: center;
   color: #242b37;
+  grid-area: text;
   @include screen.mobile {
     margin: 0px auto 27px auto;
   }
@@ -47,6 +64,15 @@
   & > * {
     margin: 0px;
   }
+  @include screen.mobileAndTablet {
+    width: 327px;
+    height: 157px;
+  }
+
+  @include screen.desktop {
+    width: 445px;
+    height: 157px;
+  }
 }
 .title {
   font-weight: 700;
@@ -56,7 +82,7 @@
     line-height: -0.4px;
     letter-spacing: -0.4px;
   }
-  @include screen.tablet {
+  @include screen.tabletAndDesktop {
     font-size: 48px;
     line-height: 48px;
     letter-spacing: -0.5px;
@@ -68,7 +94,7 @@
     font-size: 16px;
     line-height: 26px;
   }
-  @include screen.tablet {
+  @include screen.tabletAndDesktop {
     font-size: 20px;
     line-height: 30px;
     margin-top: 19px;
@@ -78,10 +104,11 @@
 .eventChangerContainer {
   display: flex;
   color: #4c4c4c;
+  grid-area: eventChangerContainer;
   @include screen.mobile {
     width: 180px;
     height: 116px;
-
+    text-align: center;
     margin: 49px auto 27px auto;
 
     flex-direction: column;
@@ -89,11 +116,17 @@
   @include screen.tablet {
     gap: 41px;
     margin-top: 57px;
+    text-align: center;
+  }
+  @include screen.desktop {
+    flex-direction: column;
+    gap: 12px;
+    text-align: start;
   }
 
   & > * {
     margin: 0px 0px;
-    text-align: center;
+
     font-weight: 600;
     font-size: 17px;
     line-height: 28px;
@@ -125,11 +158,12 @@
       margin-top: 16px;
     }
   }
-}
 
-.button {
-  width: fit-content;
-  margin: auto;
-  outline: 2px solid black;
-  outline-offset: -2dev px;
+  .button {
+    grid-area: button;
+    width: fit-content;
+    margin: auto;
+    outline: 2px solid black;
+    outline-offset: -2px;
+  }
 }

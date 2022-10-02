@@ -45,11 +45,22 @@
   @include screen.mobile {
     width: 327px;
   }
-  @include screen.tablet {
+  @include screen.tabletAndDesktop {
     width: 445px;
   }
+
   @include screen.desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    max-margin-right: 125px;
+    margin-top: 0;
   }
+}
+
+.textDivider {
+  width: 72px;
 }
 .mainTitle {
   font-weight: 700;
@@ -101,6 +112,16 @@
     width: 573px;
     margin: 24px auto;
   }
+
+  @include screen.desktop {
+    width: 540px;
+    margin: 24px auto;
+  }
+}
+.mainMenuItemsContainer {
+  @include screen.desktop {
+    margin-top: 48px;
+  }
 }
 
 //MenuItems
@@ -145,7 +166,7 @@
 }
 
 .deskTabImg {
-  z-index: 2;
+  z-index: 5;
   @include screen.mobileAndTablet {
     display: none;
   }
@@ -157,7 +178,7 @@
 }
 
 .mobileImg {
-  z-index: 2;
+  z-index: 5;
   @include screen.mobile {
     width: 327px;
     height: 245px;
@@ -172,7 +193,7 @@
 }
 
 .menuItemtext {
-  @include screen.tablet {
+  @include screen.tabletAndDesktop {
     width: 383px;
     height: 82px;
     margin-left: 62px;
@@ -188,6 +209,9 @@
   margin-bottom: 6px;
   @include screen.tablet {
     margin-top: 0px;
+  }
+  @include screen.desktop {
+    margin-top: 4px;
   }
 }
 
