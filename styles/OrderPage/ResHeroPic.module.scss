@@ -1,0 +1,119 @@
+@use "styles/_utils/screen.module.scss";
+
+.mainContainer {
+  display: grid;
+  & > * {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+  color: #ffffff;
+  height: 600px;
+
+  overflow: hidden;
+  @include screen.mobile {
+    margin-bottom: 534px;
+  }
+}
+
+.pic {
+  width: 100%;
+  height: inherit;
+}
+
+.mobHeroPic {
+  @include screen.tabletAndDesktop {
+    display: none;
+  }
+}
+.tabHeroPic {
+  @include screen.mobile {
+    display: none;
+  }
+  @include screen.desktop {
+    display: none;
+  }
+}
+.deskHeroPic {
+  @include screen.mobileAndTablet {
+    display: none;
+  }
+}
+
+.textAndButton {
+  @include screen.mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 327px;
+    margin: 56px auto 0px auto;
+  }
+  @include screen.desktop {
+    width: 445px;
+    margin-top: 65px;
+    margin-left: 165px;
+  }
+}
+
+.logo {
+  @include screen.tablet {
+    margin-top: 56px;
+    margin-left: 39px;
+  }
+}
+
+.text {
+  text-align: center;
+  @include screen.tablet {
+    width: 573px;
+    height: 166px;
+    margin: 70px auto 0px auto;
+  }
+  @include screen.desktop {
+    margin-top: 153px;
+  }
+}
+
+.title {
+  font-weight: 300;
+  margin: 0;
+  @include screen.mobile {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.4px;
+    margin-top: 44px;
+  }
+  @include screen.tablet {
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -0.6px;
+  }
+  @include screen.desktop {
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: -1px;
+  }
+}
+
+.para {
+  font-weight: 400;
+  margin: 0px;
+  @include screen.mobile {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 13px;
+    margin-bottom: 19px;
+  }
+  @include screen.tabletAndDesktop {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @include screen.desktop {
+    margin-top: 18px;
+  }
+}
+
+.button {
+  @include screen.tabletAndDesktop {
+    display: none;
+  }
+}
