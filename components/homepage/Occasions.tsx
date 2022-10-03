@@ -31,15 +31,19 @@ export default function Occasions() {
   ];
 
   const [OccasionData, setOccasionData] = useState(0);
+  const [currentEvent, setCurrentEvent] = useState(s.currentEvent1);
 
   function changeToFamilyGathering() {
     setOccasionData(0);
+    setCurrentEvent(s.currentEvent1);
   }
   function changeToSpecialEvents() {
     setOccasionData(1);
+    setCurrentEvent(s.currentEvent2);
   }
   function changeToSocialEvents() {
     setOccasionData(2);
+    setCurrentEvent(s.currentEvent3);
   }
 
   return (
@@ -62,10 +66,10 @@ export default function Occasions() {
         />
 
         <div className={s.textContainer}>
-          <div className={s.eventChangerContainer}>
+          <div className={`${s.eventChangerContainer}  ${currentEvent}`}>
             <h3 onClick={() => changeToFamilyGathering()}>Family Gathering</h3>
-            <h3 onClick={() => changeToSpecialEvents()}> Special Events</h3>
-            <h3 onClick={() => changeToSocialEvents()}> Social Events </h3>
+            <h3 onClick={() => changeToSpecialEvents()}>Special Events</h3>
+            <h3 onClick={() => changeToSocialEvents()}>Social Events</h3>
           </div>
 
           <div className={s.text}>

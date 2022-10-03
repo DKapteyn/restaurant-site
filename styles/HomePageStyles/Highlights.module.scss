@@ -6,10 +6,12 @@
   background-color: black;
   position: relative;
   top: -72px;
+  margin: auto;
+  z-index: 2;
 
   @include screen.mobile {
     height: 1720px;
-    margin: auto;
+
     padding-top: 72px;
   }
   @include screen.tablet {
@@ -144,14 +146,20 @@
 }
 
 .imgContainer {
+  display: grid;
   width: fit-content;
   height: fit-content;
   position: relative;
+
+  & > * {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+  }
 }
 
 .imageDivide {
   position: absolute;
-  z-index: 1;
+
   @include screen.mobile {
     display: none;
   }
@@ -166,7 +174,7 @@
 }
 
 .deskTabImg {
-  z-index: 5;
+  z-index: 2;
   @include screen.mobileAndTablet {
     display: none;
   }
@@ -178,7 +186,7 @@
 }
 
 .mobileImg {
-  z-index: 5;
+  z-index: 2;
   @include screen.mobile {
     width: 327px;
     height: 245px;

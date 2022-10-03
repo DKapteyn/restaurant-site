@@ -4,7 +4,7 @@
   display: flex;
   position: relative;
 
-  z-index: 2;
+  z-index: 3;
   margin: auto;
 
   @include screen.mobileAndTablet {
@@ -127,6 +127,7 @@
   position: relative;
   width: fit-content;
   height: fit-content;
+  z-index: 3;
 }
 
 .image {
@@ -145,7 +146,7 @@
   }
   @include screen.desktop {
     position: absolute;
-    top: 248px;
+    top: 282px;
     right: -114px;
   }
 }
@@ -197,6 +198,6 @@
   @include screen.desktop {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 80px;
   }
 }

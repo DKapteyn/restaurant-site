@@ -51,12 +51,15 @@
 }
 
 .text {
-  text-align: center;
   color: #242b37;
   grid-area: text;
   @include screen.mobile {
     margin: 0px auto 27px auto;
   }
+  @include screen.mobileAndTablet {
+    text-align: center;
+  }
+
   @include screen.tablet {
     margin: 47px auto 120px auto;
   }
@@ -126,7 +129,6 @@
 
   & > * {
     margin: 0px 0px;
-
     font-weight: 600;
     font-size: 17px;
     line-height: 28px;
@@ -134,18 +136,28 @@
     letter-spacing: 2.5px;
     position: relative;
 
-    &:after {
-      content: "";
-      position: absolute;
-      left: 5px;
-      bottom: 0;
-      height: 1px;
-      width: 93%; /* or 100px */
-      border-bottom: 2px solid var(--beaver);
+    @include screen.desktop {
+      opacity: 0.5;
+    }
+    &:hover {
+      @include screen.desktop {
+        opacity: 1;
+      }
+    }
 
-      opacity: 0;
-      transform: scaleX(0);
-      transition: transform 450ms ease-in-out;
+    &:after {
+      @include screen.mobileAndTablet {
+        content: "";
+        position: absolute;
+        left: 5px;
+        bottom: 0;
+        height: 1px;
+        width: 93%; /* or 100px */
+        border-bottom: 2px solid var(--beaver);
+        opacity: 0;
+        transform: scaleX(0);
+        transition: transform 450ms ease-in-out;
+      }
     }
     &:hover:after {
       opacity: 1;
@@ -158,12 +170,53 @@
       margin-top: 16px;
     }
   }
+}
 
-  .button {
-    grid-area: button;
-    width: fit-content;
+@mixin lineBefore {
+  position: relative;
+  opacity: 1;
+
+  &:before {
+    @include screen.desktop {
+      content: "";
+      position: absolute;
+      width: 95px;
+      height: 1px;
+      left: -127px;
+      bottom: 14px;
+      background-color: var(--beaver);
+      opacity: 0.5;
+    }
+  }
+}
+
+.currentEvent1 {
+  & > :nth-child(1) {
+    @include lineBefore;
+  }
+}
+.currentEvent2 {
+  & > :nth-child(2) {
+    @include lineBefore;
+  }
+}
+.currentEvent3 {
+  & > :nth-child(3) {
+    @include lineBefore;
+  }
+}
+
+.button {
+  grid-area: button;
+  width: fit-content;
+
+  outline: 2px solid black;
+  outline-offset: -2px;
+  @include screen.mobileAndTablet {
     margin: auto;
-    outline: 2px solid black;
-    outline-offset: -2px;
+  }
+
+  @include screen.desktop {
+    margin-bottom: auto;
   }
 }

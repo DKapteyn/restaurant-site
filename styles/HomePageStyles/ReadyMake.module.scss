@@ -4,14 +4,16 @@
   display: grid;
   margin-top: 124px;
   overflow: hidden;
+  width: 100%;
 
   @include screen.mobile {
-    width: 100%;
     height: 328px;
   }
   @include screen.tablet {
-    width: 100%;
     height: 272px;
+  }
+  @include screen.desktop {
+    height: 240px;
   }
 
   & > * {
@@ -20,25 +22,60 @@
   }
 }
 
-.image {
-  width: 100%;
-  height: 100%;
+.imageMob {
+  @include screen.mobile {
+    width: 100%;
+    height: 100%;
+  }
+  @include screen.tabletAndDesktop {
+    display: none;
+  }
+}
+.imageTab {
+  @include screen.mobile {
+    display: none;
+  }
+
+  @include screen.desktop {
+    display: none;
+  }
+  @include screen.tablet {
+    width: 100%;
+    height: 100%;
+  }
+}
+.imageDesk {
+  @include screen.mobileAndTablet {
+    display: none;
+  }
+  @include screen.desktop {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .subContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
 
   @include screen.mobile {
     width: 327px;
     height: 164px;
     margin: 84px auto 80px auto;
   }
+  @include screen.mobileAndTablet {
+    flex-direction: column;
+    align-items: center;
+  }
   @include screen.tablet {
     width: 615px;
     height: 136px;
     margin: 72px auto 64px auto;
+  }
+  @include screen.desktop {
+    height: fit-content;
+    padding: 88px 165px;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -46,20 +83,27 @@
   text-align: center;
   font-weight: 700;
   color: #ffffff;
+  margin-top: 0px;
   @include screen.mobile {
     font-size: 32px;
     line-height: 40px;
     /* or 125% */
-    margin-top: 0px;
+
     margin-bottom: 20px;
     letter-spacing: -0.4px;
   }
   @include screen.tablet {
+    margin-bottom: 24px;
+  }
+
+  @include screen.tabletAndDesktop {
     font-size: 48px;
     line-height: 48px;
     /* identical to box height, or 100% */
-    margin-bottom: 24px;
-    margin-top: 0px;
+
     letter-spacing: -0.5px;
+  }
+  @include screen.desktop {
+    margin-bottom: 0px;
   }
 }

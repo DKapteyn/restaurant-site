@@ -6,8 +6,18 @@ export default function ReadyMake() {
   return (
     <div className={s.mainContainer}>
       <img
-        className={s.image}
+        className={s.imageMob}
         src="./images/homepage/ready-bg-mobile@2x.jpg"
+        alt="toast"
+      />
+      <img
+        className={s.imageTab}
+        src="./images/homepage/ready-bg-tablet@2x.jpg"
+        alt="toast"
+      />
+      <img
+        className={s.imageDesk}
+        src="./images/homepage/ready-bg-desktop@2x.jpg"
         alt="toast"
       />
 
