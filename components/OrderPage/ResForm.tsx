@@ -29,16 +29,22 @@ export default function ResForm() {
             <div className={s.inDates}>
               <input className={s.inDate} type="text" placeholder="09" />
               <input className={s.inDate} type="text" placeholder="00" />
-            </div>
 
-            <p className={s.inDate}>
-              <select className={s.dropDown} name="am-pm">
-                <option value="AM" selected>
-                  AM
-                </option>
-                <option value="PM">PM</option>
-              </select>
-            </p>
+              <div className={`${s.inDate}  `}>
+                <div className={s.dropDownTitle}>
+                  <span>AM</span>
+                  <img src="./images/icons/icon-arrow.svg" alt="arrow" />
+                  <div className={s.dropDownList}>
+                    <div>
+                      <p>AM</p>
+                    </div>
+                    <div>
+                      <p>PM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className={s.numPeople}>
