@@ -3,6 +3,7 @@ import s from "../../styles/OrderPage/ResForm.module.scss";
 import Button from "../shared/Button";
 export default function ResForm() {
   const [numPeople, setNumPeople] = useState(4);
+  const [dropDown, setDropDown] = useState(false);
 
   return (
     <div className={s.mainContainer}>
@@ -30,18 +31,34 @@ export default function ResForm() {
               <input className={s.inDate} type="text" placeholder="09" />
               <input className={s.inDate} type="text" placeholder="00" />
 
-              <div className={`${s.inDate}  `}>
+              <div
+                onClick={() => setDropDown(!dropDown)}
+                className={`${s.inDate}  `}
+              >
                 <div className={s.dropDownTitle}>
                   <span>AM</span>
-                  <img src="./images/icons/icon-arrow.svg" alt="arrow" />
-                  <div className={s.dropDownList}>
-                    <div>
-                      <p>AM</p>
+
+                  {!dropDown && (
+                    <img src="./images/icons/icon-arrow.svg" alt="arrow" />
+                  )}
+                  {dropDown && (
+                    <img
+                      className={s.flipped}
+                      src="./images/icons/icon-arrow.svg"
+                      alt="arrow"
+                    />
+                  )}
+
+                  {dropDown && (
+                    <div className={`${s.dropDownList} ${s.checked2}`}>
+                      <div>
+                        <p>AM</p>
+                      </div>
+                      <div>
+                        <p>PM</p>
+                      </div>
                     </div>
-                    <div>
-                      <p>PM</p>
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>

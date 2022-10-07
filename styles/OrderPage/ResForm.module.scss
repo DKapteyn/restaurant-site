@@ -125,6 +125,32 @@
     background-color: white;
   }
 
+  @mixin checked {
+    position: relative;
+
+    &::before {
+      content: url("../../public/images/icons/icon-check.svg");
+      position: absolute;
+      left: -25px;
+      top: 14px;
+    }
+  }
+  .checked1 {
+    & > :nth-child(1) {
+      @include checked;
+    }
+  }
+
+  .checked2 {
+    & > :nth-child(2) {
+      @include checked;
+    }
+  }
+
+  .flipped {
+    transform: scale(-1);
+  }
+
   // border: none;
   // font-weight: 400;
   // font-size: 20px;
