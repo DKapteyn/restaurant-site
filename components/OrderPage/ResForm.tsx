@@ -4,6 +4,15 @@ import Button from "../shared/Button";
 export default function ResForm() {
   const [numPeople, setNumPeople] = useState(4);
   const [dropDown, setDropDown] = useState(false);
+  const [AMPM, setAMPM] = useState("AM");
+  const [checked, setChecked] = useState(s.checked1);
+
+  function changeToAM() {
+    setAMPM("AM"), setChecked(s.checked1);
+  }
+  function changeToPM() {
+    setAMPM("PM"), setChecked(s.checked2);
+  }
 
   return (
     <div className={s.mainContainer}>
@@ -16,7 +25,7 @@ export default function ResForm() {
         />
         <div className={s.inDateContainer}>
           <div className={s.inDateAndText}>
-            <h4 className={s.inDateText}>Pick a date</h4>
+            <h4 className={s.DateTitle}>Pick a date</h4>
             <div className={s.inDates}>
               <input className={s.inDate} type="text" placeholder="MM" />
               <input className={s.inDate} type="text" placeholder="DD" />
@@ -26,7 +35,7 @@ export default function ResForm() {
         </div>
         <div className={s.inDateContainer}>
           <div className={s.inDateAndText}>
-            <h4 className={s.inDateText}>Pick a time</h4>
+            <h4 className={s.DateTitle}>Pick a time</h4>
             <div className={s.inDates}>
               <input className={s.inDate} type="text" placeholder="09" />
               <input className={s.inDate} type="text" placeholder="00" />
@@ -36,7 +45,7 @@ export default function ResForm() {
                 className={`${s.inDate}  `}
               >
                 <div className={s.dropDownTitle}>
-                  <span>AM</span>
+                  <span>{AMPM}</span>
 
                   {!dropDown && (
                     <img src="./images/icons/icon-arrow.svg" alt="arrow" />
@@ -50,13 +59,10 @@ export default function ResForm() {
                   )}
 
                   {dropDown && (
-                    <div className={`${s.dropDownList} ${s.checked2}`}>
-                      <div>
-                        <p>AM</p>
-                      </div>
-                      <div>
-                        <p>PM</p>
-                      </div>
+                    <div className={`${s.dropDownList} ${checked}`}>
+                      <p onClick={changeToAM}>AM</p>
+
+                      <p onClick={changeToPM}>PM</p>
                     </div>
                   )}
                 </div>
@@ -79,7 +85,7 @@ export default function ResForm() {
         </div>
       </form>
       <div className={s.button}>
-        <Button title="make reservation" link="#" propWidth="100%" />
+        <Button title="make reservation" propWidth="100%" />
       </div>
     </div>
   );

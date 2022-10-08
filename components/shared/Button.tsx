@@ -31,9 +31,13 @@ export default function Button({
       className={s.mainContainer}
       style={propBasedStyles}
     >
-      <Link href={link}>
+      {link ? (
+        <Link href={link}>
+          <h4 className={`${font.headingS} ${s.capitalize}`}>{title}</h4>
+        </Link>
+      ) : (
         <h4 className={`${font.headingS} ${s.capitalize}`}>{title}</h4>
-      </Link>
+      )}
     </div>
   );
 }

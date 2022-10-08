@@ -7,7 +7,7 @@ export interface LayoutT {
 export interface ButtonT {
   propWidth?: string;
   title: string;
-  link: string;
+  link?: string;
   propBackgroundColor?: string;
   hoverColor?: string;
 }
