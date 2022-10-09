@@ -13,6 +13,12 @@
   @include screen.mobile {
     margin-bottom: 534px;
   }
+  @include screen.tablet {
+    margin-bottom: 439px;
+  }
+  @include screen.desktop {
+    margin-bottom: 319px;
+  }
 }
 
 .pic {

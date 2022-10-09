@@ -7,6 +7,23 @@ export default function ResForm() {
   const [AMPM, setAMPM] = useState("AM");
   const [checked, setChecked] = useState(s.checked1);
 
+  const initialValue = {
+    name: "",
+    email: "",
+    year: "",
+    month: "",
+    day: "",
+    hour: "",
+    minute: "",
+  };
+  const [formValues, setFormValues] = useState(initialValue);
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const { name, value } = e.target;
+
+    setFormValues({ ...formValues, [name]: value });
+  }
+
   function changeToAM() {
     setAMPM("AM"), setChecked(s.checked1);
   }
@@ -14,22 +31,54 @@ export default function ResForm() {
     setAMPM("PM"), setChecked(s.checked2);
   }
 
+  function validate(e: React.FormEvent) {
+    e.preventDefault();
+    console.log({ ...formValues });
+  }
+
   return (
     <div className={s.mainContainer}>
-      <form className={s.formContainer} action="post">
-        <input className={s.inText} type="text" placeholder="Name" />
+      <form className={s.formContainer} action="post" onSubmit={validate}>
+        <input
+          className={s.inText}
+          type="text"
+          placeholder="Name"
+          onChange={handleChange}
+          name="name"
+        />
         <input
           className={`${s.inText} ${s.inTextEmail}`}
           type="text"
           placeholder="Email"
+          onChange={handleChange}
+          name="email"
         />
         <div className={s.inDateContainer}>
           <div className={s.inDateAndText}>
             <h4 className={s.DateTitle}>Pick a date</h4>
+
             <div className={s.inDates}>
-              <input className={s.inDate} type="text" placeholder="MM" />
-              <input className={s.inDate} type="text" placeholder="DD" />
-              <input className={s.inDate} type="text" placeholder="YYYY" />
+              <input
+                className={s.inDate}
+                type="text"
+                name="month"
+                placeholder="MM"
+                onChange={handleChange}
+              />
+              <input
+                className={s.inDate}
+                type="text"
+                name="day"
+                placeholder="DD"
+                onChange={handleChange}
+              />
+              <input
+                className={s.inDate}
+                type="text"
+                name="year"
+                placeholder="YYYY"
+                onChange={handleChange}
+              />
             </div>
           </div>
         </div>
@@ -37,8 +86,20 @@ export default function ResForm() {
           <div className={s.inDateAndText}>
             <h4 className={s.DateTitle}>Pick a time</h4>
             <div className={s.inDates}>
-              <input className={s.inDate} type="text" placeholder="09" />
-              <input className={s.inDate} type="text" placeholder="00" />
+              <input
+                className={s.inDate}
+                name="hour"
+                type="text"
+                placeholder="09"
+                onChange={handleChange}
+              />
+              <input
+                className={s.inDate}
+                name="minute"
+                type="text"
+                placeholder="00"
+                onChange={handleChange}
+              />
 
               <div
                 onClick={() => setDropDown(!dropDown)}
@@ -83,10 +144,10 @@ export default function ResForm() {
             alt="plus"
           />
         </div>
+        <button type="submit" className={s.button}>
+          <Button title="make reservation" propWidth="100%" />
+        </button>
       </form>
-      <div className={s.button}>
-        <Button title="make reservation" propWidth="100%" />
-      </div>
     </div>
   );
 }
