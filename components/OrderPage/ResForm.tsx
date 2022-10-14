@@ -1,7 +1,8 @@
 import React, { useState, useReducer } from "react";
 import s from "../../styles/OrderPage/ResForm.module.scss";
 import Button from "../shared/Button";
-export default function ResForm() {
+import { modalT } from "../../types";
+export default function ResForm({ setModalOpen }: modalT) {
   const [numPeople, setNumPeople] = useState(4);
   const [dropDown, setDropDown] = useState(false);
   const [AMPM, setAMPM] = useState("AM");
@@ -34,53 +35,31 @@ export default function ResForm() {
     setFormValues({ ...formValues, [name]: value });
   }
 
+  function hourFormat() {
+    formValues.hour.length === 0 ||
+    formValues.hour === "0" ||
+    formValues.hour === "00"
+      ? (formValues.hour = "")
+      : formValues.hour.length === 1
+      ? (formValues.hour = "0" + formValues.hour)
+      : formValues.hour;
+  }
+
+  function minuteFormat() {
+    formValues.minute.length === 0 ||
+    formValues.minute === "0" ||
+    formValues.minute === "00"
+      ? (formValues.minute = "")
+      : formValues.minute.length === 1
+      ? (formValues.minute = "0" + formValues.minute)
+      : formValues.minute;
+  }
+
   function changeToAM() {
     setAMPM("AM"), setChecked(s.checked1);
   }
   function changeToPM() {
     setAMPM("PM"), setChecked(s.checked2);
-  }
-
-  function validate(e: React.FormEvent) {
-    e.preventDefault();
-    let errorSubmit = {
-      name: "",
-      email: "",
-      date: "",
-      time: "",
-    };
-    //Name validation
-    if (formValues.name === "") {
-      errorSubmit.name = "This field is Required";
-      setNameError(s.inputError);
-    }
-
-    //email validation
-    let emailRegex =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-    formValues.email === ""
-      ? ((errorSubmit.email = "This field is required"),
-        setEmailError(s.inputError))
-      : emailRegex.test(formValues.email) === false
-      ? ((errorSubmit.email = "valid email Required"),
-        setEmailError(s.inputError))
-      : (errorSubmit.email = "");
-
-    formValues.month === "" || formValues.day === "" || formValues.year === ""
-      ? ((errorSubmit.date = "This field is incomplete"),
-        setDateError(s.inputError))
-      : /[1-31]/.test(formValues.day) ||
-        /[1-12]/.test(formValues.month) ||
-        formValues.year.length > 4
-      ? ((errorSubmit.date = "Valid Date Required"), setDateError(s.inputError))
-      : (errorSubmit.date = "");
-
-    if (formValues.hour === "" || formValues.minute === "") {
-      (errorSubmit.time = "This field is incomplete"),
-        setTimeError(s.inputError);
-    }
-    setErrorValue({ ...errorSubmit });
   }
 
   function resetNameError() {
@@ -100,6 +79,66 @@ export default function ResForm() {
   function resetTimeError() {
     setErrorValue({ ...errorValue, time: "" });
     setTimeError("");
+  }
+
+  function validate(e: React.FormEvent) {
+    e.preventDefault();
+    let errorSubmit = {
+      name: "",
+      email: "",
+      date: "",
+      time: "",
+    };
+
+    hourFormat();
+    minuteFormat();
+
+    //Name validation
+    if (formValues.name === "") {
+      errorSubmit.name = "This field is Required";
+      setNameError(s.inputError);
+    }
+
+    //email validation
+    let emailRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    formValues.email === ""
+      ? ((errorSubmit.email = "This field is required"),
+        setEmailError(s.inputError))
+      : emailRegex.test(formValues.email) === false
+      ? ((errorSubmit.email = "valid email Required"),
+        setEmailError(s.inputError))
+      : (errorSubmit.email = "");
+
+    // date validation
+
+    formValues.month === "" || formValues.day === "" || formValues.year === ""
+      ? ((errorSubmit.date = "This field is incomplete"),
+        setDateError(s.inputError))
+      : /\b([1-9]|[12][0-9]|3[01])\b/.test(formValues.day) === true &&
+        /\b([1-9]|1[0-2])\b/.test(formValues.month) === true
+      ? (errorSubmit.date = "")
+      : ((errorSubmit.date = "Valid Date Required"),
+        setDateError(s.inputError));
+
+    //Time validation
+
+    formValues.hour === "" || formValues.minute === ""
+      ? ((errorSubmit.time = "This field is incomplete"),
+        setTimeError(s.inputError))
+      : /\b(0[1-9]|1[0-2])\b/.test(formValues.hour) === true &&
+        /\b(0[1-9]|[0-5][0-9])\b/.test(formValues.minute) === true
+      ? (errorSubmit.time = "")
+      : ((errorSubmit.time = "Valid time required"),
+        setTimeError(s.inputError));
+
+    errorSubmit.name === "" &&
+    errorSubmit.email === "" &&
+    errorSubmit.date === "" &&
+    errorSubmit.time === ""
+      ? setModalOpen(true)
+      : setErrorValue({ ...errorSubmit });
   }
 
   return (
@@ -181,11 +220,13 @@ export default function ResForm() {
                 name="hour"
                 type="text"
                 placeholder="09"
+                value={formValues.hour}
                 onChange={handleChange}
               />
               <input
                 className={s.inDate}
                 name="minute"
+                value={formValues.minute}
                 type="text"
                 placeholder="00"
                 onChange={handleChange}

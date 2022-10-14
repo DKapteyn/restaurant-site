@@ -29,3 +29,8 @@ export interface MenuItemsT {
   //React Element used to add <br/> tags if necessary.
   itemPara: string | ReactElement;
 }
+
+export interface modalT {
+  modalOpen: boolean;
+  setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
