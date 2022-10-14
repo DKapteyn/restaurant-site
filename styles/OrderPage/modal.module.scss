@@ -1,0 +1,22 @@
+@use "styles/_utils/screen.module.scss";
+
+.mainContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: hsl(0, 0%, 0%, 0.5);
+
+  display: grid;
+  place-items: center;
+}
+
+.subContainer {
+  background-color: white;
+  @include screen.tabletAndDesktop {
+    width: 500px;
+    height: 300px;
+    opacity: 1;
+  }
+}

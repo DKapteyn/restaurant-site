@@ -46,9 +46,7 @@ export default function ResForm({ setModalOpen }: modalT) {
   }
 
   function minuteFormat() {
-    formValues.minute.length === 0 ||
-    formValues.minute === "0" ||
-    formValues.minute === "00"
+    formValues.minute.length === 0
       ? (formValues.minute = "")
       : formValues.minute.length === 1
       ? (formValues.minute = "0" + formValues.minute)
@@ -139,6 +137,20 @@ export default function ResForm({ setModalOpen }: modalT) {
     errorSubmit.time === ""
       ? setModalOpen(true)
       : setErrorValue({ ...errorSubmit });
+
+    (function resetFormValue() {
+      const blankFormValue = {
+        name: "",
+        email: "",
+        year: "",
+        month: "",
+        day: "",
+        hour: "",
+        minute: "",
+      };
+      setFormValues({ ...blankFormValue });
+      setNumPeople(4);
+    })();
   }
 
   return (
@@ -154,6 +166,7 @@ export default function ResForm({ setModalOpen }: modalT) {
             placeholder="Name"
             onChange={handleChange}
             name="name"
+            value={formValues.name}
           />
           <p className={`${s.error} ${s.errorName}`}>{errorValue.name}</p>
         </div>
@@ -167,6 +180,7 @@ export default function ResForm({ setModalOpen }: modalT) {
             placeholder="Email"
             onChange={handleChange}
             name="email"
+            value={formValues.email}
           />
           <p className={`${s.error} ${s.errorEmail}`}>{errorValue.email}</p>
         </div>
@@ -188,6 +202,7 @@ export default function ResForm({ setModalOpen }: modalT) {
                 name="month"
                 placeholder="MM"
                 onChange={handleChange}
+                value={formValues.month}
               />
               <input
                 className={s.inDate}
@@ -195,6 +210,7 @@ export default function ResForm({ setModalOpen }: modalT) {
                 name="day"
                 placeholder="DD"
                 onChange={handleChange}
+                value={formValues.day}
               />
               <input
                 className={s.inDate}
@@ -202,6 +218,7 @@ export default function ResForm({ setModalOpen }: modalT) {
                 name="year"
                 placeholder="YYYY"
                 onChange={handleChange}
+                value={formValues.year}
               />
             </div>
           </div>

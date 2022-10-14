@@ -31,6 +31,5 @@ export interface MenuItemsT {
 }
 
 export interface modalT {
-  modalOpen: boolean;
   setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
