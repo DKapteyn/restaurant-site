@@ -36,11 +36,12 @@
     margin: 34px 32px 32px 32px;
   }
   @include screen.tabletAndDesktop {
-    margin: 50px 48px 48px 48px;
+    margin: 34px 48px 48px 48px;
   }
-  & > input {
+  & > * > input {
     border: none;
     border-bottom: 1px solid #8e8e8e;
+    width: 100%;
   }
 }
 
@@ -69,7 +70,7 @@
   margin-top: 20px;
 
   @include screen.tabletAndDesktop {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 }
 
@@ -124,6 +125,7 @@
   @include screen.tabletAndDesktop {
     min-width: 90px;
     margin-top: 19px;
+    margin-right: 48px;
   }
 }
 
@@ -233,4 +235,47 @@
   margin: 32px auto;
   outline: 2px solid black;
   outline-offset: -2px;
+}
+
+.TAndEContainer {
+  position: relative;
+}
+
+.error {
+  color: #b54949;
+  position: absolute;
+  width: max-content;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 9px;
+  letter-spacing: -0.125px;
+}
+.errorName {
+  @include screen.tabletAndDesktop {
+    top: 60px;
+  }
+}
+
+.errorEmail {
+  @include screen.tabletAndDesktop {
+    top: 80px;
+  }
+}
+
+.errorDateTime {
+  @include screen.tabletAndDesktop {
+    top: 37px;
+  }
+}
+
+.inputError {
+  & > * {
+    border-color: #b54949 !important;
+    color: #b54949;
+
+    &::placeholder {
+      color: #b54949;
+      opacity: 50%;
+    }
+  }
 }
