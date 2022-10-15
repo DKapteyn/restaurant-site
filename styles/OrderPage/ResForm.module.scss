@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: column;
   @include screen.mobile {
-    margin: 34px 32px 32px 32px;
+    margin: 20px 32px 32px 32px;
   }
   @include screen.tabletAndDesktop {
     margin: 34px 48px 48px 48px;
@@ -98,15 +98,15 @@
   border: none;
   border-bottom: 1px solid #8e8e8e;
   width: 100%;
-  margin-left: 15px;
+
   @include screen.mobile {
-    // padding: 0px;
+    padding: 0px 15px 14px 15px;
   }
 
   @include screen.tabletAndDesktop {
     height: 43px;
     line-height: 0px;
-    padding: 0px 0px 14px 15px;
+    padding: 0px 15px 14px 15px;
   }
   &:focus-within {
     outline: none;
@@ -225,6 +225,9 @@
   letter-spacing: -0.25px;
 
   color: #151515;
+  @include screen.mobile {
+    margin-top: 36px;
+  }
 }
 
 .button {
@@ -263,13 +266,17 @@
 }
 
 .errorDateTime {
+  @include screen.mobile {
+    top: 80px;
+  }
   @include screen.tabletAndDesktop {
     top: 37px;
   }
 }
 
 .inputError {
-  & > * {
+  & > input,
+  h4 {
     border-color: #b54949 !important;
     color: #b54949;
 

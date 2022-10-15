@@ -52,6 +52,21 @@ export default function ResForm({ setModalOpen }: modalT) {
       ? (formValues.minute = "0" + formValues.minute)
       : formValues.minute;
   }
+  function monthFormat() {
+    formValues.month.length === 0
+      ? (formValues.month = "")
+      : formValues.month.length === 1
+      ? (formValues.month = "0" + formValues.month)
+      : formValues.month;
+  }
+
+  function dayFormat() {
+    formValues.day.length === 0
+      ? (formValues.day = "")
+      : formValues.day.length === 1
+      ? (formValues.day = "0" + formValues.day)
+      : formValues.day;
+  }
 
   function changeToAM() {
     setAMPM("AM"), setChecked(s.checked1);
@@ -90,10 +105,12 @@ export default function ResForm({ setModalOpen }: modalT) {
 
     hourFormat();
     minuteFormat();
+    monthFormat();
+    dayFormat();
 
     //Name validation
     if (formValues.name === "") {
-      errorSubmit.name = "This field is Required";
+      errorSubmit.name = "This field is required";
       setNameError(s.inputError);
     }
 
@@ -105,7 +122,7 @@ export default function ResForm({ setModalOpen }: modalT) {
       ? ((errorSubmit.email = "This field is required"),
         setEmailError(s.inputError))
       : emailRegex.test(formValues.email) === false
-      ? ((errorSubmit.email = "valid email Required"),
+      ? ((errorSubmit.email = "Valid email required"),
         setEmailError(s.inputError))
       : (errorSubmit.email = "");
 
@@ -114,10 +131,10 @@ export default function ResForm({ setModalOpen }: modalT) {
     formValues.month === "" || formValues.day === "" || formValues.year === ""
       ? ((errorSubmit.date = "This field is incomplete"),
         setDateError(s.inputError))
-      : /\b([1-9]|[12][0-9]|3[01])\b/.test(formValues.day) === true &&
-        /\b([1-9]|1[0-2])\b/.test(formValues.month) === true
+      : /\b(0[1-9]|[12][0-9]|3[01])\b/.test(formValues.day) === true &&
+        /\b(0[1-9]|1[0-2])\b/.test(formValues.month) === true
       ? (errorSubmit.date = "")
-      : ((errorSubmit.date = "Valid Date Required"),
+      : ((errorSubmit.date = "Valid date required"),
         setDateError(s.inputError));
 
     //Time validation
@@ -135,24 +152,22 @@ export default function ResForm({ setModalOpen }: modalT) {
     errorSubmit.email === "" &&
     errorSubmit.date === "" &&
     errorSubmit.time === ""
-      ? setModalOpen(true)
+      ? (function resetFormValue() {
+          const blankFormValue = {
+            name: "",
+            email: "",
+            year: "",
+            month: "",
+            day: "",
+            hour: "",
+            minute: "",
+          };
+          setModalOpen(true);
+          setFormValues({ ...blankFormValue });
+          setNumPeople(4);
+        })()
       : setErrorValue({ ...errorSubmit });
-
-    (function resetFormValue() {
-      const blankFormValue = {
-        name: "",
-        email: "",
-        year: "",
-        month: "",
-        day: "",
-        hour: "",
-        minute: "",
-      };
-      setFormValues({ ...blankFormValue });
-      setNumPeople(4);
-    })();
   }
-
   return (
     <div className={s.mainContainer}>
       <form className={s.formContainer} action="post" onSubmit={validate}>
