@@ -1,5 +1,5 @@
 import React from "react";
-import SecondaryPic from "./SecondaryPic";
+
 import s from "../../styles/HomePageStyles/EnjoyablePlace.module.scss";
 
 export default function EnjoyablePlace() {
@@ -12,7 +12,7 @@ export default function EnjoyablePlace() {
           alt="sheep"
         />
         <img
-          className={` ${s.mainImageTab} ${s.image}`}
+          className={`${s.image} ${s.mainImageTab} `}
           src="./images/homepage/enjoyable-place-tablet@2x.jpg"
           alt="sheep"
         />

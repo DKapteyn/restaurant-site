@@ -1,0 +1,16 @@
+@use "styles/_utils/screen.module.scss";
+
+.mainContainer {
+  @include screen.mobileAndTablet {
+    display: none;
+    & > * {
+      display: none;
+    }
+  }
+}
+
+.lines {
+  position: relative;
+  top: -78px;
+  right: 262px;
+}
