@@ -4,6 +4,7 @@ import ResHeroPic from "../components/OrderPage/ResHeroPic";
 import Layout from "../components/shared/Layout";
 import Modal from "../components/OrderPage/Modal";
 import Designs from "../components/OrderPage/Designs";
+
 export default function OrderPage() {
   const [openModal, setModalOpen] = useState(false);
   return (

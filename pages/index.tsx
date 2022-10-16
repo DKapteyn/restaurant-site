@@ -3,7 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Layout from "../components/shared/Layout";
 import HeroHome from "../components/homepage/HeroHome";
-import SecondaryPic from "../components/homepage/SecondaryPic";
+
 import MenuHighlights from "../components/homepage/Highlights/MenuHighlights";
 import Occasions from "../components/homepage/Occasions";
 import ReadyMake from "../components/homepage/ReadyMake";
