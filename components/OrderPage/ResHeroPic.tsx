@@ -31,7 +31,12 @@ export default function ResHeroPic() {
             to accommodate you.
           </p>
         </div>
-        <div className={s.button}>
+        <div
+          onClick={() => {
+            window.scrollTo({ top: 425, left: 0, behavior: "smooth" });
+          }}
+          className={s.button}
+        >
           <Button
             link="#"
             propBackgroundColor="transparent"
