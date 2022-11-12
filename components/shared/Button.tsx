@@ -25,19 +25,28 @@ export default function Button({
   };
 
   return (
-    <div
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
-      className={s.mainContainer}
-      style={propBasedStyles}
-    >
+    <>
       {link ? (
         <Link href={link}>
-          <h4 className={`${font.headingS} ${s.capitalize}`}>{title}</h4>
+          <div
+            onMouseEnter={() => setIsHover(true)}
+            onMouseLeave={() => setIsHover(false)}
+            className={s.mainContainer}
+            style={propBasedStyles}
+          >
+            <h4 className={`${font.headingS} ${s.capitalize}`}>{title}</h4>
+          </div>
         </Link>
       ) : (
-        <h4 className={`${font.headingS} ${s.capitalize}`}>{title}</h4>
+        <div
+          onMouseEnter={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
+          className={s.mainContainer}
+          style={propBasedStyles}
+        >
+          <h4 className={`${font.headingS} ${s.capitalize}`}>{title}</h4>
+        </div>
       )}
-    </div>
+    </>
   );
 }

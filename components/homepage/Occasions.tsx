@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../shared/Button";
 import s from "../../styles/HomePageStyles/Occasions.module.scss";
+import { motion } from "framer-motion";
 
 export default function Occasions() {
   const dataArray = [
@@ -49,17 +50,29 @@ export default function Occasions() {
   return (
     <div>
       <section className={s.mainContainer}>
-        <img
+        <motion.img
+          initial={{ opacity: 0.5 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          key={dataArray[`${OccasionData}`].deskImage}
           className={s.deskImage}
           src={dataArray[`${OccasionData}`].deskImage}
           alt="People Eating"
         />
-        <img
+        <motion.img
+          initial={{ opacity: 0.5 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          key={dataArray[`${OccasionData}`].tabImage}
           className={s.tabImage}
           src={dataArray[`${OccasionData}`].tabImage}
           alt="People Eating"
         />
-        <img
+        <motion.img
+          initial={{ opacity: 0.5 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          key={dataArray[`${OccasionData}`].mobImage}
           className={s.mobImage}
           src={dataArray[`${OccasionData}`].mobImage}
           alt="People Eating"
@@ -72,10 +85,16 @@ export default function Occasions() {
             <h3 onClick={() => changeToSocialEvents()}>Social Events</h3>
           </div>
 
-          <div className={s.text}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            key={dataArray[`${OccasionData}`].title}
+            className={s.text}
+          >
             <h2 className={s.title}>{dataArray[`${OccasionData}`].title}</h2>
             <p className={s.para}>{dataArray[`${OccasionData}`].para}</p>
-          </div>
+          </motion.div>
 
           <div className={s.button}>
             <Button link="/orderPage" title="Book a table" />
