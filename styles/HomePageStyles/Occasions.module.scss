@@ -18,6 +18,7 @@
 
 .deskImage {
   display: none;
+  position: relative;
   @include screen.desktop {
     display: inline;
     width: 540px;
@@ -26,6 +27,7 @@
 }
 .tabImage {
   display: none;
+  position: relative;
   @include screen.tablet {
     display: inline;
     width: 573px;
@@ -34,6 +36,7 @@
 }
 .mobImage {
   display: none;
+  position: relative;
   @include screen.mobile {
     display: inline;
     width: 326px;

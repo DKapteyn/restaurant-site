@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 import s from "../../styles/HomePageStyles/EnjoyablePlace.module.scss";
@@ -6,21 +7,27 @@ export default function EnjoyablePlace() {
   return (
     <div className={s.mainContainer}>
       <div>
-        <img
-          className={` ${s.mainImageDesk} ${s.image}`}
-          src="./images/homepage/enjoyable-place-desktop@2x.jpg"
-          alt="sheep"
-        />
-        <img
-          className={`${s.image} ${s.mainImageTab} `}
-          src="./images/homepage/enjoyable-place-tablet@2x.jpg"
-          alt="sheep"
-        />
-        <img
-          className={` ${s.mainImageMob} ${s.image}`}
-          src="./images/homepage/enjoyable-place-mobile@2x.jpg"
-          alt="sheep"
-        />
+        <div className={` ${s.mainImageDesk} ${s.image}`}>
+          <Image
+            src="/images/homepage/enjoyable-place-desktop@2x.jpg"
+            alt="sheep"
+            layout="fill"
+          />
+        </div>
+        <div className={`${s.image} ${s.mainImageTab} `}>
+          <Image
+            src="/images/homepage/enjoyable-place-tablet@2x.jpg"
+            alt="sheep"
+            layout="fill"
+          />
+        </div>
+        <div className={` ${s.mainImageMob} ${s.image}`}>
+          <Image
+            src="/images/homepage/enjoyable-place-mobile@2x.jpg"
+            alt="sheep"
+            layout="fill"
+          />
+        </div>
       </div>
 
       <div className={s.subContainer}>

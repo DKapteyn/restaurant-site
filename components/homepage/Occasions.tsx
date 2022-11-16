@@ -2,30 +2,31 @@ import React, { useState } from "react";
 import Button from "../shared/Button";
 import s from "../../styles/HomePageStyles/Occasions.module.scss";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Occasions() {
   const dataArray = [
     {
       id: "familyGatherings",
-      deskImage: "./images/homepage/family-gathering-desktop@2x.jpg",
-      tabImage: "./images/homepage/family-gathering-tablet@2x.jpg",
-      mobImage: "./images/homepage/family-gathering-mobile@2x.jpg",
+      deskImage: "/images/homepage/family-gathering-desktop@2x.jpg",
+      tabImage: "/images/homepage/family-gathering-tablet@2x.jpg",
+      mobImage: "/images/homepage/family-gathering-mobile@2x.jpg",
       title: "Family Gathering",
       para: " We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.",
     },
     {
       id: "specialEvents",
-      deskImage: "./images/homepage/special-events-desktop@2x.jpg",
-      tabImage: "./images/homepage/special-events-tablet@2x.jpg",
-      mobImage: "./images/homepage/special-events-mobile@2x.jpg",
+      deskImage: "/images/homepage/special-events-desktop@2x.jpg",
+      tabImage: "/images/homepage/special-events-tablet@2x.jpg",
+      mobImage: "/images/homepage/special-events-mobile@2x.jpg",
       title: "Special Events",
       para: " Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal.",
     },
     {
       id: "socialEvents",
-      deskImage: "./images/homepage/social-events-desktop@2x.jpg",
-      tabImage: "./images/homepage/social-events-tablet@2x.jpg",
-      mobImage: "./images/homepage/social-events-mobile@2x.jpg",
+      deskImage: "/images/homepage/social-events-desktop@2x.jpg",
+      tabImage: "/images/homepage/social-events-tablet@2x.jpg",
+      mobImage: "/images/homepage/social-events-mobile@2x.jpg",
       title: "Social Events",
       para: "Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone.",
     },
@@ -50,33 +51,47 @@ export default function Occasions() {
   return (
     <div>
       <section className={s.mainContainer}>
-        <motion.img
+        <motion.div
           initial={{ opacity: 0.5 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
           key={dataArray[`${OccasionData}`].deskImage}
           className={s.deskImage}
-          src={dataArray[`${OccasionData}`].deskImage}
-          alt="People Eating"
-        />
-        <motion.img
+        >
+          <Image
+            src={dataArray[`${OccasionData}`].deskImage}
+            alt="People Eating"
+            layout="fill"
+          />
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0.5 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
           key={dataArray[`${OccasionData}`].tabImage}
           className={s.tabImage}
-          src={dataArray[`${OccasionData}`].tabImage}
-          alt="People Eating"
-        />
-        <motion.img
+        >
+          <Image
+            src={dataArray[`${OccasionData}`].tabImage}
+            alt="People Eating"
+            layout="fill"
+          />
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0.5 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
           key={dataArray[`${OccasionData}`].mobImage}
           className={s.mobImage}
-          src={dataArray[`${OccasionData}`].mobImage}
-          alt="People Eating"
-        />
+        >
+          <Image
+            src={dataArray[`${OccasionData}`].mobImage}
+            alt="People Eating"
+            layout="fill"
+          />
+        </motion.div>
 
         <div className={s.textContainer}>
           <div className={`${s.eventChangerContainer}  ${currentEvent}`}>

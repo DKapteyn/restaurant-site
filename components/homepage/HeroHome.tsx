@@ -1,26 +1,35 @@
 import React from "react";
 import font from "../../styles/_utils/font.module.scss";
 import style from "../../styles/HomePageStyles/HeroHome.module.scss";
+import screen from "../../styles/_utils/screen.module.scss";
 import Button from "../shared/Button";
+import Image from "next/image";
 
 export default function HeroHome() {
   return (
     <div className={style.mainContainer}>
-      <img
-        className={`${style.desktopPic} ${style.pic}`}
-        src="./images/homepage/hero-bg-desktop@2x.jpg"
-        alt="plate of food"
-      />
-      <img
-        className={`${style.mobileAndTabletPic} ${style.pic}`}
-        src="./images/homepage/hero-bg-tablet@2x.jpg"
-        alt="plate of food"
-      />
-      <img
-        className={`${style.mobileAndTabletPic} ${style.pic}`}
-        src="./images/homepage/hero-bg-mobile@2x.jpg"
-        alt="plate of food"
-      />
+      <div className={`${style.desktopPic} ${style.pic}`}>
+        <Image
+          src="/images/homepage/hero-bg-desktop@2x.jpg"
+          alt="plate of food"
+          layout="fill"
+        />
+      </div>
+      <div className={`${style.mobileAndTabletPic} ${style.pic}`}>
+        <Image
+          src="/images/homepage/hero-bg-tablet@2x.jpg"
+          alt="plate of food"
+          layout="fill"
+        />
+      </div>
+      <div className={`${style.mobileAndTabletPic} ${style.pic}`}>
+        <Image
+          src="/images/homepage/hero-bg-mobile@2x.jpg"
+          alt="plate of food"
+          layout="fill"
+        />
+      </div>
+
       <div className={style.block}>this is the block</div>
 
       <div className={style.textContainer}>

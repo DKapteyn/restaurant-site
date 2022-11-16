@@ -1,19 +1,17 @@
 //screen sizes
 
-$md: 475px;
-$lg: 1024px;
+$MD: 475;
+$LG: 1024;
 
-$mdMin: $md;
-$mdMax: $md - 1px;
-$lgMin: $lg;
-$lgMax: $lg - 1px;
+$mdMin: $MD + px;
+$mdMax: $MD - 1px;
+$lgMin: $LG + px;
+$lgMax: $LG - 1px;
 
 //export to Typescript
 :export {
-  mdMax: $mdMax;
-  mdMin: $mdMin;
-  lgMax: $lgMax;
-  lgMin: $lgMin;
+  MD_SCREEN_W: $MD + w;
+  LG_SCREEN_W: $LG + w;
 }
 
 @mixin mobile {
