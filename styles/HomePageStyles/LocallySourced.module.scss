@@ -140,8 +140,8 @@
   }
   @include screen.tablet {
     position: absolute;
-    top: 152px;
-    left: 471px;
+    bottom: 56px;
+    right: -56px;
     z-index: 2;
   }
   @include screen.desktop {
@@ -153,8 +153,6 @@
 
 .mainImageDesk {
   @include screen.desktop {
-    height: 72rem;
-    width: 54rem;
     margin-left: 150px;
   }
   @include screen.mobileAndTablet {
@@ -163,10 +161,6 @@
 }
 
 .mainImageTab {
-  @include screen.tablet {
-    height: 36rem;
-    width: 57.3rem;
-  }
   @include screen.mobile {
     display: none;
   }
@@ -177,8 +171,6 @@
 
 .mainImageMob {
   @include screen.mobile {
-    height: 40rem;
-    width: 32.7rem;
     margin-bottom: 4.8rem;
   }
   @include screen.tabletAndDesktop {
@@ -192,12 +184,12 @@
   }
   @include screen.tablet {
     position: absolute;
-    top: 473px;
-    left: 287px;
+    top: 2162px;
+    right: -384px;
   }
   @include screen.desktop {
     position: absolute;
-    right: 0;
-    bottom: 80px;
+    top: 1911px;
+    right: 0px;
   }
 }
