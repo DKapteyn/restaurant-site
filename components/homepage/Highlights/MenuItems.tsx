@@ -1,9 +1,10 @@
+import Image from "next/image";
 import React from "react";
 import s from "../../../styles/HomePageStyles/Highlights.module.scss";
 import { MenuItemsT } from "../../../types";
+import divideSVG from "../../../public/images/patterns/pattern-divide.svg";
 export default function MenuItems({
   deskTabImg,
-
   mobImg,
   imgAlt,
   itemTitle,
@@ -12,13 +13,15 @@ export default function MenuItems({
   return (
     <div className={s.menuItemContainer}>
       <div className={s.imgContainer}>
-        <img className={s.deskTabImg} src={deskTabImg} alt={imgAlt} />
-        <img className={s.mobileImg} src={mobImg} alt={imgAlt} />
-        <img
-          className={s.imageDivide}
-          src="./images/patterns/pattern-divide.svg"
-          alt="decoration"
-        />
+        <div className={s.deskTabImg}>
+          <Image src={deskTabImg} alt={imgAlt} layout="fill" />
+        </div>
+        <div className={s.mobileImg}>
+          <Image src={mobImg} alt={imgAlt} layout="fill" />
+        </div>
+        <div className={s.imageDivide}>
+          <Image src={divideSVG} alt="decoration" />
+        </div>
       </div>
 
       <div className={s.menuItemtext}>

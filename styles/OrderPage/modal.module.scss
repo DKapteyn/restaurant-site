@@ -7,7 +7,7 @@
   right: 0;
   left: 0;
   background-color: hsl(0, 0%, 0%, 0.5);
-
+  z-index: 10;
   display: grid;
   place-items: center;
 }
@@ -61,4 +61,5 @@
 
 .checkIcon {
   transform: scale(2);
+  margin-top: 5px;
 }

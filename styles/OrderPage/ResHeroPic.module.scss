@@ -8,39 +8,18 @@
   }
   color: #ffffff;
   height: 600px;
-
+  background-size: cover;
   overflow: hidden;
   @include screen.mobile {
     margin-bottom: 534px;
+    background-image: url("../../public/images/booking/hero-bg-mobile@2x.jpg");
   }
   @include screen.tablet {
     margin-bottom: 439px;
+    background-image: url("../../public/images/booking/hero-bg-tablet@2x.jpg");
   }
   @include screen.desktop {
-  }
-}
-
-.pic {
-  width: 100%;
-  height: inherit;
-}
-
-.mobHeroPic {
-  @include screen.tabletAndDesktop {
-    display: none;
-  }
-}
-.tabHeroPic {
-  @include screen.mobile {
-    display: none;
-  }
-  @include screen.desktop {
-    display: none;
-  }
-}
-.deskHeroPic {
-  @include screen.mobileAndTablet {
-    display: none;
+    background-image: url("../../public/images/booking/hero-bg-desktop@2x.jpg");
   }
 }
 

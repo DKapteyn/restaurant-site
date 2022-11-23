@@ -2,6 +2,11 @@ import React, { useState, useReducer } from "react";
 import s from "../../styles/OrderPage/ResForm.module.scss";
 import Button from "../shared/Button";
 import { modalT } from "../../types";
+import arrowSVG from "../../public/images/icons/icon-arrow.svg";
+import minusIcon from "../../public/images/icons/icon-minus.svg";
+import plusIcon from "../../public/images/icons/icon-plus.svg";
+
+import Image from "next/image";
 export default function ResForm({ setModalOpen }: modalT) {
   const [numPeople, setNumPeople] = useState(4);
   const [dropDown, setDropDown] = useState(false);
@@ -272,14 +277,14 @@ export default function ResForm({ setModalOpen }: modalT) {
                   <span>{AMPM}</span>
 
                   {!dropDown && (
-                    <img src="./images/icons/icon-arrow.svg" alt="arrow" />
+                    <div className={s.arrowWrapper}>
+                      <Image src={arrowSVG} alt="arrow" layout="fill" />
+                    </div>
                   )}
                   {dropDown && (
-                    <img
-                      className={s.flipped}
-                      src="./images/icons/icon-arrow.svg"
-                      alt="arrow"
-                    />
+                    <div className={`${s.arrowWrapper}  ${s.flipped}`}>
+                      <Image src={arrowSVG} alt="arrow" layout="fill" />
+                    </div>
                   )}
 
                   {dropDown && (
@@ -295,17 +300,21 @@ export default function ResForm({ setModalOpen }: modalT) {
           </div>
         </div>
         <div className={s.numPeople}>
-          <img
-            onClick={() => setNumPeople((prevNumPeople) => prevNumPeople - 1)}
-            src="./images/icons/icon-minus.svg"
-            alt="minus"
-          />
+          <div className={s.pointer}>
+            <Image
+              onClick={() => setNumPeople((prevNumPeople) => prevNumPeople - 1)}
+              src={minusIcon}
+              alt="minus"
+            />
+          </div>
           <h3 className={s.numPeopleText}> {`${numPeople} People`}</h3>
-          <img
-            onClick={() => setNumPeople((prevNumPeople) => prevNumPeople + 1)}
-            src="./images/icons/icon-plus.svg"
-            alt="plus"
-          />
+          <div className={s.pointer}>
+            <Image
+              onClick={() => setNumPeople((prevNumPeople) => prevNumPeople + 1)}
+              src={plusIcon}
+              alt="plus"
+            />
+          </div>
         </div>
         <button type="submit" className={s.button}>
           <Button title="make reservation" propWidth="100%" />

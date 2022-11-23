@@ -5,7 +5,7 @@ import Button from "../shared/Button";
 export default function ResHeroPic() {
   return (
     <div className={s.mainContainer}>
-      <img
+      {/* <img
         className={`${s.mobHeroPic} ${s.pic}`}
         src="./images/booking/hero-bg-mobile@2x.jpg"
         alt="plate of food"
@@ -19,7 +19,7 @@ export default function ResHeroPic() {
         className={`${s.deskHeroPic} ${s.pic}`}
         src="./images/booking/hero-bg-desktop@2x.jpg"
         alt="plate of food"
-      />
+  />*/}
 
       <div className={s.textAndButton}>
         <img className={s.logo} src="./images/logo.svg" alt="logo" />

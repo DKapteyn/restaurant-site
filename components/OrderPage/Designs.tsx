@@ -1,17 +1,15 @@
 import React from "react";
 import s from "../../styles/OrderPage/designs.module.scss";
+import curveBottomSVG from "../../public/images/patterns/pattern-curve-bottom-right.svg";
+import linesSVG from "../../public/images/patterns/pattern-lines.svg";
+import Image from "next/image";
 export default function Designs() {
   return (
     <div className={s.mainContainer}>
-      <img
-        src="./images/patterns/pattern-curve-bottom-right.svg"
-        alt="design"
-      />
-      <img
-        className={s.lines}
-        src="./images/patterns/pattern-lines.svg"
-        alt="lines"
-      />
+      <Image src={curveBottomSVG} alt="design" />
+      <div className={s.lines}>
+        <Image src={linesSVG} alt="lines" />
+      </div>
     </div>
   );
 }
