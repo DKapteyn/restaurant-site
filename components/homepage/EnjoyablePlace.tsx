@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-
+import divideSVG from "../../public/images/patterns/pattern-divide.svg";
+import designSVG from "../../public/images/patterns/pattern-curve-top-right.svg";
 import s from "../../styles/HomePageStyles/EnjoyablePlace.module.scss";
 
 export default function EnjoyablePlace() {
@@ -31,11 +32,9 @@ export default function EnjoyablePlace() {
       </div>
 
       <div className={s.subContainer}>
-        <img
-          className={`${s.image} ${s.line}`}
-          src="./images/patterns/pattern-divide.svg"
-          alt="divider"
-        />
+        <div className={`${s.image} ${s.line}`}>
+          <Image src={divideSVG} alt="divider" />
+        </div>
 
         <div className={s.textContainer}>
           <h2 className={s.titleText}>Enjoyable place for all the family</h2>
@@ -44,12 +43,9 @@ export default function EnjoyablePlace() {
             everyone. We can even arrange a tour of the farm before your meal.
           </h3>
         </div>
-
-        <img
-          className={s.design}
-          src="./images/patterns/pattern-curve-top-right.svg"
-          alt="design"
-        />
+        <div className={s.design}>
+          <Image src={designSVG} alt="design" />
+        </div>
       </div>
     </div>
   );

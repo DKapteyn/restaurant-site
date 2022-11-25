@@ -34,6 +34,13 @@
 
 .subContainer {
   display: flex;
+  display: row;
+  width: fit-content;
+  margin: auto;
+}
+
+.textAndDivideContainer {
+  display: flex;
   flex-direction: column;
 
   color: #242b37;
@@ -47,6 +54,7 @@
   }
   @include screen.desktop {
     margin-left: 125px;
+    margin-top: 200px;
     align-items: left;
     width: 445px;
     height: 275px;
@@ -153,7 +161,7 @@
 
 .mainImageDesk {
   @include screen.desktop {
-    margin-left: 150px;
+    margin-left: 125px;
   }
   @include screen.mobileAndTablet {
     display: none;

@@ -110,7 +110,6 @@ export default function Occasions() {
             <h2 className={s.title}>{dataArray[`${OccasionData}`].title}</h2>
             <p className={s.para}>{dataArray[`${OccasionData}`].para}</p>
           </motion.div>
-
           <div className={s.button}>
             <Button link="/orderPage" title="Book a table" />
           </div>

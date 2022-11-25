@@ -8,7 +8,6 @@
   margin: auto;
   @include screen.mobileAndTablet {
     flex-direction: column;
-
     margin-top: 8px;
   }
   @include screen.desktop {
@@ -56,6 +55,7 @@
 .text {
   color: #242b37;
   grid-area: text;
+
   @include screen.mobile {
     margin: 0px auto 27px auto;
   }
@@ -64,15 +64,18 @@
   }
 
   @include screen.tablet {
-    margin: 47px auto 120px auto;
+    margin: 47px auto 0 auto;
   }
 
   & > * {
     margin: 0px;
   }
-  @include screen.mobileAndTablet {
+  @include screen.mobile {
     width: 327px;
     height: 157px;
+  }
+  @include screen.tablet {
+    width: 457px;
   }
 
   @include screen.desktop {
@@ -99,11 +102,13 @@
   @include screen.mobile {
     font-size: 16px;
     line-height: 26px;
+    margin: 13px auto 27px auto;
   }
   @include screen.tabletAndDesktop {
     font-size: 20px;
     line-height: 30px;
     margin-top: 19px;
+    margin-bottom: 60px;
   }
 }
 
@@ -111,12 +116,12 @@
   display: flex;
   color: #4c4c4c;
   grid-area: eventChangerContainer;
+
   @include screen.mobile {
     width: 180px;
     height: 116px;
     text-align: center;
-    margin: 49px auto 27px auto;
-
+    margin: 49px auto 27px 0;
     flex-direction: column;
   }
   @include screen.tablet {
@@ -128,6 +133,7 @@
     flex-direction: column;
     gap: 12px;
     text-align: start;
+    justify-content: end;
   }
 
   & > * {
@@ -138,14 +144,9 @@
     cursor: pointer;
     letter-spacing: 2.5px;
     position: relative;
-
-    @include screen.desktop {
-      opacity: 0.5;
-    }
+    opacity: 0.5;
     &:hover {
-      @include screen.desktop {
-        opacity: 1;
-      }
+      opacity: 1;
     }
 
     &:after {
@@ -177,7 +178,6 @@
 
 @mixin lineBefore {
   position: relative;
-  opacity: 1;
 
   &:before {
     @include screen.desktop {
@@ -221,5 +221,6 @@
 
   @include screen.desktop {
     margin-bottom: auto;
+    margin-top: 21px;
   }
 }
