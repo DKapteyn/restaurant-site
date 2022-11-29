@@ -14,7 +14,7 @@
   @include screen.desktop {
     top: 8px;
     align-items: center;
-    flex-direction: row-reverse;
+
     justify-content: center;
   }
 
@@ -26,17 +26,10 @@
   }
 
   @include screen.mobileAndTablet {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     margin-bottom: 10.1rem;
   }
-}
-
-.subContainer {
-  display: flex;
-  display: row;
-  width: fit-content;
-  margin: auto;
 }
 
 .textAndDivideContainer {
@@ -53,7 +46,6 @@
     align-items: center;
   }
   @include screen.desktop {
-    margin-left: 125px;
     margin-top: 200px;
     align-items: left;
     width: 445px;
@@ -150,7 +142,6 @@
     position: absolute;
     bottom: 56px;
     right: -56px;
-    z-index: 2;
   }
   @include screen.desktop {
     position: absolute;

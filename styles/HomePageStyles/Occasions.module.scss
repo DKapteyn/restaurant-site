@@ -45,7 +45,7 @@
 
 .textContainer {
   @include screen.desktop {
-    padding-left: 125px;
+    margin-left: 125px;
     display: grid;
     grid-template-areas: "text" "button" "eventChangerContainer";
     height: 468px;
@@ -121,7 +121,7 @@
     width: 180px;
     height: 116px;
     text-align: center;
-    margin: 49px auto 27px 0;
+    margin: 49px auto 27px auto;
     flex-direction: column;
   }
   @include screen.tablet {
@@ -177,8 +177,8 @@
 }
 
 @mixin lineBefore {
-  position: relative;
-
+  // position: relative;
+  opacity: 1;
   &:before {
     @include screen.desktop {
       content: "";
