@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import s from "../../styles/HomePageStyles/LocallySourced.module.scss";
-import lineSVG from "../../public/images/patterns/pattern-lines.svg";
-import divideSVG from "../../public/images/patterns/pattern-divide.svg";
-import designSVG from "../../public/images/patterns/pattern-curve-top-left.svg";
+import lineSVG from "../../public/restaurant-site/images/patterns/pattern-lines.svg";
+import divideSVG from "../../public/restaurant-site/images/patterns/pattern-divide.svg";
+import designSVG from "../../public/restaurant-site/images/patterns/pattern-curve-top-left.svg";
 
 export default function LocallySourced() {
   return (
@@ -27,7 +27,7 @@ export default function LocallySourced() {
         <div className={s.imgContainer}>
           <div className={` ${s.mainImageDesk} ${s.image}`}>
             <Image
-              src="/images/homepage/locally-sourced-desktop@2x.jpg"
+              src="/restaurant-site/images/homepage/locally-sourced-desktop@2x.jpg"
               alt="plate of food"
               height={720}
               width={540}
@@ -35,7 +35,7 @@ export default function LocallySourced() {
           </div>
           <div className={` ${s.mainImageTab} ${s.image}`}>
             <Image
-              src="/images/homepage/locally-sourced-tablet@2x.jpg"
+              src="/restaurant-site/images/homepage/locally-sourced-tablet@2x.jpg"
               alt="plate of food"
               height={360}
               width={573}
@@ -43,7 +43,7 @@ export default function LocallySourced() {
           </div>
           <div className={` ${s.mainImageMob} ${s.image}`}>
             <Image
-              src="/images/homepage/locally-sourced-mobile@2x.jpg"
+              src="/restaurant-site/images/homepage/locally-sourced-mobile@2x.jpg"
               alt="plate of food"
               height={400}
               width={327}

@@ -5,7 +5,11 @@ export default function Footer() {
     <div className={s.container}>
       <div className={s.main}>
         <div>
-          <img className={s.image} src="./images/logo.svg" alt="who know" />
+          <img
+            className={s.image}
+            src="./restaurant-site/images/logo.svg"
+            alt="who know"
+          />
         </div>
         <div className={s.textContainer}>
           <div className={s.text1}>

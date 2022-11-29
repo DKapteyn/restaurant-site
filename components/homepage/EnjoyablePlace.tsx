@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import divideSVG from "../../public/images/patterns/pattern-divide.svg";
-import designSVG from "../../public/images/patterns/pattern-curve-top-right.svg";
+import divideSVG from "../../public/restaurant-site/images/patterns/pattern-divide.svg";
+import designSVG from "../../public/restaurant-site/images/patterns/pattern-curve-top-right.svg";
 import s from "../../styles/HomePageStyles/EnjoyablePlace.module.scss";
 
 export default function EnjoyablePlace() {
@@ -10,21 +10,21 @@ export default function EnjoyablePlace() {
       <div>
         <div className={` ${s.mainImageDesk} ${s.image}`}>
           <Image
-            src="/images/homepage/enjoyable-place-desktop@2x.jpg"
+            src="/restaurant-site/images/homepage/enjoyable-place-desktop@2x.jpg"
             alt="sheep"
             layout="fill"
           />
         </div>
         <div className={`${s.image} ${s.mainImageTab} `}>
           <Image
-            src="/images/homepage/enjoyable-place-tablet@2x.jpg"
+            src="/restaurant-site/images/homepage/enjoyable-place-tablet@2x.jpg"
             alt="sheep"
             layout="fill"
           />
         </div>
         <div className={` ${s.mainImageMob} ${s.image}`}>
           <Image
-            src="/images/homepage/enjoyable-place-mobile@2x.jpg"
+            src="/restaurant-site/images/homepage/enjoyable-place-mobile@2x.jpg"
             alt="sheep"
             layout="fill"
           />

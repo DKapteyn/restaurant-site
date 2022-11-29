@@ -9,17 +9,17 @@
 
   @include screen.mobile {
     height: 328px;
-    background-image: url("../../public/images/homepage/ready-bg-mobile@2x.jpg");
+    background-image: url("../../public/restaurant-site/images/homepage/ready-bg-mobile@2x.jpg");
     margin-top: 124px;
   }
   @include screen.tablet {
     height: 272px;
-    background-image: url("../../public/images/homepage/ready-bg-tablet@2x.jpg");
+    background-image: url("../../public/restaurant-site/images/homepage/ready-bg-tablet@2x.jpg");
     margin-top: 120px;
   }
   @include screen.desktop {
     height: 160px;
-    background-image: url("../../public/images/homepage/ready-bg-desktop@2x.jpg");
+    background-image: url("../../public/restaurant-site/images/homepage/ready-bg-desktop@2x.jpg");
     margin-top: 160px;
     align-items: center;
   }

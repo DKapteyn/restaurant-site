@@ -1,7 +1,7 @@
 import React from "react";
 import s from "../../styles/OrderPage/designs.module.scss";
-import curveBottomSVG from "../../public/images/patterns/pattern-curve-bottom-right.svg";
-import linesSVG from "../../public/images/patterns/pattern-lines.svg";
+import curveBottomSVG from "../../public/restaurant-site/images/patterns/pattern-curve-bottom-right.svg";
+import linesSVG from "../../public/restaurant-site/images/patterns/pattern-lines.svg";
 import Image from "next/image";
 export default function Designs() {
   return (

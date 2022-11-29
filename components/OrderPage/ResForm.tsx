@@ -2,9 +2,9 @@ import React, { useState, useReducer } from "react";
 import s from "../../styles/OrderPage/ResForm.module.scss";
 import Button from "../shared/Button";
 import { modalT } from "../../types";
-import arrowSVG from "../../public/images/icons/icon-arrow.svg";
-import minusIcon from "../../public/images/icons/icon-minus.svg";
-import plusIcon from "../../public/images/icons/icon-plus.svg";
+import arrowSVG from "../../public/restaurant-site/images/icons/icon-arrow.svg";
+import minusIcon from "../../public/restaurant-site/images/icons/icon-minus.svg";
+import plusIcon from "../../public/restaurant-site/images/icons/icon-plus.svg";
 
 import Image from "next/image";
 export default function ResForm({ setModalOpen }: modalT) {

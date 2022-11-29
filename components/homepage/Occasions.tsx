@@ -8,25 +8,30 @@ export default function Occasions() {
   const dataArray = [
     {
       id: "familyGatherings",
-      deskImage: "/images/homepage/family-gathering-desktop@2x.jpg",
-      tabImage: "/images/homepage/family-gathering-tablet@2x.jpg",
-      mobImage: "/images/homepage/family-gathering-mobile@2x.jpg",
+      deskImage:
+        "/restaurant-site/images/homepage/family-gathering-desktop@2x.jpg",
+      tabImage:
+        "/restaurant-site/images/homepage/family-gathering-tablet@2x.jpg",
+      mobImage:
+        "/restaurant-site/images/homepage/family-gathering-mobile@2x.jpg",
       title: "Family Gathering",
       para: " We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.",
     },
     {
       id: "specialEvents",
-      deskImage: "/images/homepage/special-events-desktop@2x.jpg",
-      tabImage: "/images/homepage/special-events-tablet@2x.jpg",
-      mobImage: "/images/homepage/special-events-mobile@2x.jpg",
+      deskImage:
+        "/restaurant-site/images/homepage/special-events-desktop@2x.jpg",
+      tabImage: "/restaurant-site/images/homepage/special-events-tablet@2x.jpg",
+      mobImage: "/restaurant-site/images/homepage/special-events-mobile@2x.jpg",
       title: "Special Events",
       para: " Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal.",
     },
     {
       id: "socialEvents",
-      deskImage: "/images/homepage/social-events-desktop@2x.jpg",
-      tabImage: "/images/homepage/social-events-tablet@2x.jpg",
-      mobImage: "/images/homepage/social-events-mobile@2x.jpg",
+      deskImage:
+        "/restaurant-site/images/homepage/social-events-desktop@2x.jpg",
+      tabImage: "/restaurant-site/images/homepage/social-events-tablet@2x.jpg",
+      mobImage: "/restaurant-site/images/homepage/social-events-mobile@2x.jpg",
       title: "Social Events",
       para: "Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone.",
     },

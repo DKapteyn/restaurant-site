@@ -9,7 +9,7 @@ export default function MenuHighlights() {
         <div className={s.textContainer}>
           <img
             className={s.textDivider}
-            src="./images/patterns/pattern-divide.svg"
+            src="./restaurant-site/images/patterns/pattern-divide.svg"
             alt="divider"
           />
           <h3 className={s.mainTitle}> A few highlights from our menu</h3>
@@ -20,8 +20,8 @@ export default function MenuHighlights() {
         </div>
         <div className={s.mainMenuItemsContainer}>
           <MenuItems
-            deskTabImg="/images/homepage/salmon-desktop-tablet@2x.jpg"
-            mobImg="/images/homepage/salmon-mobile@2x.jpg"
+            deskTabImg="/restaurant-site/images/homepage/salmon-desktop-tablet@2x.jpg"
+            mobImg="/restaurant-site/images/homepage/salmon-mobile@2x.jpg"
             imgAlt="Seared Salmon Fillet"
             itemTitle="Seared Salmon Fillet"
             itemPara={
@@ -33,8 +33,8 @@ export default function MenuHighlights() {
           />
           <div className={s.line}></div>
           <MenuItems
-            deskTabImg="/images/homepage/beef-desktop-tablet@2x.jpg"
-            mobImg="/images/homepage/beef-mobile@2x.jpg"
+            deskTabImg="/restaurant-site/images/homepage/beef-desktop-tablet@2x.jpg"
+            mobImg="/restaurant-site/images/homepage/beef-mobile@2x.jpg"
             imgAlt="Rosemary Filet Mignon"
             itemTitle="Rosemary Filet Mignon"
             itemPara={
@@ -46,8 +46,8 @@ export default function MenuHighlights() {
           />
           <div className={s.line}></div>
           <MenuItems
-            deskTabImg="/images/homepage/chocolate-desktop-tablet@2x.jpg"
-            mobImg="/images/homepage/chocolate-mobile@2x.jpg"
+            deskTabImg="/restaurant-site/images/homepage/chocolate-desktop-tablet@2x.jpg"
+            mobImg="/restaurant-site/images/homepage/chocolate-mobile@2x.jpg"
             imgAlt="Summer Fruit Chocolate Mousse"
             itemTitle="Summer Fruit Chocolate Mousse"
             itemPara={
