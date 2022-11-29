@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import divideSVG from "../../public/restaurant-site/images/patterns/pattern-divide.svg";
-import designSVG from "../../public/restaurant-site/images/patterns/pattern-curve-top-right.svg";
+import divideSVG from "../../public//images/patterns/pattern-divide.svg";
+import designSVG from "../../public//images/patterns/pattern-curve-top-right.svg";
 import s from "../../styles/HomePageStyles/EnjoyablePlace.module.scss";
 
 export default function EnjoyablePlace() {

@@ -2,7 +2,7 @@ import React from "react";
 import s from "../../styles/OrderPage/modal.module.scss";
 import { modalT } from "../../types";
 import Image from "next/image";
-import checkmark from "../../public/restaurant-site/images/icons/icon-checkmark.svg";
+import checkmark from "../../public//images/icons/icon-checkmark.svg";
 export default function Modal({ setModalOpen }: modalT) {
   return (
     <div onClick={() => setModalOpen(false)} className={s.mainContainer}>

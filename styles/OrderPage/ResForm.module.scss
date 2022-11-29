@@ -172,7 +172,7 @@
     position: relative;
 
     &::before {
-      content: url("../../public/restaurant-site/images/icons/icon-check.svg");
+      content: url("../../public//images/icons/icon-check.svg");
       position: absolute;
       left: -25px;
       @include screen.mobile {

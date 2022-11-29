@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import s from "../../../styles/HomePageStyles/Highlights.module.scss";
 import { MenuItemsT } from "../../../types";
-import divideSVG from "../../../public/restaurant-site/images/patterns/pattern-divide.svg";
+import divideSVG from "../../../public//images/patterns/pattern-divide.svg";
 export default function MenuItems({
   deskTabImg,
   mobImg,

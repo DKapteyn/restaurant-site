@@ -12,14 +12,14 @@
   overflow: hidden;
   @include screen.mobile {
     margin-bottom: 534px;
-    background-image: url("../../public/restaurant-site/images/booking/hero-bg-mobile@2x.jpg");
+    background-image: url("../../public//images/booking/hero-bg-mobile@2x.jpg");
   }
   @include screen.tablet {
     margin-bottom: 439px;
-    background-image: url("../../public/restaurant-site/images/booking/hero-bg-tablet@2x.jpg");
+    background-image: url("../../public//images/booking/hero-bg-tablet@2x.jpg");
   }
   @include screen.desktop {
-    background-image: url("../../public/restaurant-site/images/booking/hero-bg-desktop@2x.jpg");
+    background-image: url("../../public//images/booking/hero-bg-desktop@2x.jpg");
   }
 }
 

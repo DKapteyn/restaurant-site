@@ -35,7 +35,10 @@ export default function HeroHome() {
       <div className={style.textContainer}>
         <img
           className={style.logo}
-          src="./restaurant-site/images/logo.svg"
+          src="
+          
+          
+          ..public//images/logo.svg"
           alt="logo"
         />
         <h2 className={`${style.marginTitle1} ${font.headingXL}`}>

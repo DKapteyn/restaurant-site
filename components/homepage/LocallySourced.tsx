@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import s from "../../styles/HomePageStyles/LocallySourced.module.scss";
-import lineSVG from "../../public/restaurant-site/images/patterns/pattern-lines.svg";
-import divideSVG from "../../public/restaurant-site/images/patterns/pattern-divide.svg";
-import designSVG from "../../public/restaurant-site/images/patterns/pattern-curve-top-left.svg";
+import lineSVG from "../../public//images/patterns/pattern-lines.svg";
+import divideSVG from "../../public//images/patterns/pattern-divide.svg";
+import designSVG from "../../public//images/patterns/pattern-curve-top-left.svg";
 
 export default function LocallySourced() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import s from "../../styles/OrderPage/ResHeroPic.module.scss";
 import Button from "../shared/Button";
-import logo from "../../public/restaurant-site/images/logo.svg";
+import logo from "../../public//images/logo.svg";
 import Image from "next/image";
 
 export default function ResHeroPic() {
