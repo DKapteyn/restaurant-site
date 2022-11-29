@@ -2,6 +2,7 @@
   "name": "restaurant-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "davidkapteyn.ca/restaurant-site",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
