@@ -1,14 +1,14 @@
 import React from "react";
 import s from "../../styles/OrderPage/ResHeroPic.module.scss";
 import Button from "../shared/Button";
-import logo from "../../public//images/logo.svg";
+import logo from "../../public/images/logo.svg";
 import Image from "next/image";
 
 export default function ResHeroPic() {
   return (
     <div className={s.mainContainer}>
       <div className={s.textAndButton}>
-        <Image src={logo} />
+        <Image src={logo} alt="logo" />
         <div className={s.text}>
           <h3 className={s.title}>Reservations</h3>
           <p className={s.para}>

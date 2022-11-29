@@ -1,15 +1,15 @@
 import s from "../../styles/footer.module.scss";
+import logoSVG from "../../public/images/logo.svg";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <div className={s.container}>
       <div className={s.main}>
         <div>
-          <img
-            className={s.image}
-            src="./restaurant-site/images/logo.svg"
-            alt="who know"
-          />
+          <div className={s.image}>
+            <Image src={logoSVG} alt="who know" />
+          </div>
         </div>
         <div className={s.textContainer}>
           <div className={s.text1}>

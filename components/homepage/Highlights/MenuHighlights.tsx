@@ -1,17 +1,17 @@
 import React from "react";
 import s from "../../../styles/HomePageStyles/Highlights.module.scss";
+import divideSVG from "../../../public/images/patterns/pattern-divide.svg";
 import MenuItems from "./MenuItems";
+import Image from "next/image";
 
 export default function MenuHighlights() {
   return (
     <div className={s.mainContainer}>
       <section className={s.subContainer}>
         <div className={s.textContainer}>
-          <img
-            className={s.textDivider}
-            src="./restaurant-site/images/patterns/pattern-divide.svg"
-            alt="divider"
-          />
+          <div className={s.textDivider}>
+            <Image src={divideSVG} alt="divider" />
+          </div>
           <h3 className={s.mainTitle}> A few highlights from our menu</h3>
           <p className={`${s.para} ${s.mainPara}`}>
             We cater for all dietary requirements, but here’s a glimpse at some

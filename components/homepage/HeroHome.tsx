@@ -2,6 +2,7 @@ import React from "react";
 import font from "../../styles/_utils/font.module.scss";
 import style from "../../styles/HomePageStyles/HeroHome.module.scss";
 import screen from "../../styles/_utils/screen.module.scss";
+import logoSVG from "../../public/images/logo.svg";
 import Button from "../shared/Button";
 import Image from "next/image";
 
@@ -33,14 +34,9 @@ export default function HeroHome() {
       <div className={style.block}>this is the block</div>
 
       <div className={style.textContainer}>
-        <img
-          className={style.logo}
-          src="
-          
-          
-          ..public//images/logo.svg"
-          alt="logo"
-        />
+        <div className={style.logo}>
+          <Image src={logoSVG} alt="logo" />
+        </div>
         <h2 className={`${style.marginTitle1} ${font.headingXL}`}>
           Exquisite dining since 1989
         </h2>
